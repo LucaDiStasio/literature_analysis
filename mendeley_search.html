@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml" data-placeholder-focus="false">
+<head>
+	<script>(window.NREUM||(NREUM={})).loader_config={xpid:"UgEBVFdADAQIUFdV"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(4),t(5),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:22,ee:"QJf3ax"}],8:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+	<meta charset="utf-8">
+	<title>Search | Mendeley</title>
+
+	
+	<link rel="shortcut icon" href="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/graphics/favicon.ico">
+
+		<meta name="description" content="Browse through research papers and publications on Mendeley.">	<meta name="keywords" content="academic software, research paper, bibliography, digital library, research tool, researcher, academics, library management, reference software, library software, academic research">	<meta name="robots" content="NOINDEX">	
+	<meta name="verify-v1" content="KIQZp9vFHmQQVeTanWS2u+xvEpl3D8dHq3MBWpWhX2k=">
+	<meta name="y_key" content="a33e384681c650e5">
+	<meta name="msvalidate.01" content="38901ADA50F068F6162998FE344AE1B2">
+
+	<meta property="fb:app_id" content="10150110947375581">	<meta name="apple-itunes-app" content="app-id=380669300">
+
+
+
+
+
+
+		
+	<link rel="stylesheet" type="text/css" href="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/minified/css.css"><link rel="stylesheet" type="text/css" href="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/minified/jquery.css"><meta name="page" value="papers"><!--[if lt IE 9]><link href="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/styles/stylesheet-ie.css" rel="stylesheet" type="text/css"><![endif]--><!--[if IE 6]><link href="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/styles/stylesheet-ie6.css" rel="stylesheet" type="text/css"><![endif]--><!--[if IE 7]><link href="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/styles/stylesheet-ie7.css" rel="stylesheet" type="text/css"><![endif]--><link href="/masterbrand/dist/css/index.css" rel="stylesheet" type="text/css">
+
+	<script>
+var Mendeley = {
+	Config: {
+		hroot: "https://www.mendeley.com",
+		httpsUrl: "https://www.mendeley.com",
+		shortUrl: "",
+		sroot: "https://d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011",
+		domain: "",
+		page: "papers",
+		profileId: "",
+		profileName: "",
+		profileFullName: "",
+		profileUsername: "",
+		loadGoogleMaps: false,
+		googleMapsKey: "ABQIAAAA4lY5I_eP_7SMch77X9ceKxTWbqW3oODjNEH4JLEC2adgENl52BSqKM2qEk-1DPEWobdnJA0prcCCuA",
+		fbAppId: "10150110947375581",
+		pageSpecificTracking: "",
+		bucketTestTracking: "",
+		publisherKey: "",
+		isDesktopClient: false,
+		stashCookieName: "www_mendeley_stash",
+		uvSsoToken: "",
+		uvWidgetSrc: "//widget.uservoice.com/5cgkm6faBbPJAX27iQKjgQ.js",
+		uvWidgetForumId: "4941"
+	}
+};
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js" type="text/javascript"></script><script src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/minified/jquery.js"></script> <script src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/minified/base.js"></script> <script src="//cdn.optimizely.com/js/238413261.js"></script><script>
+	$(document).ajaxSend(function(e, xhr, options){ xhr.setRequestHeader('X-CSRF-Token', $.cookie('csrf_token')) });
+</script><script>$.ajaxSetup({ cache: false });</script><script src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/jscript/easyXDM/easyXDM.min.js"></script> <!--[if lt IE 9]><script src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/jscript/misc/html5shiv.js"></script> <![endif]--><script>$(function(){ if($.cookie("__munv")) $('#verification-reminder').show(); });</script><script src="//use.typekit.com/muv1pzg.js"></script>
+<script>try{ Typekit.load(); } catch(e){ }</script>
+<script>
+	var _gaq = _gaq || [];
+
+	
+	_gaq.push(['_setAccount', 'UA-3874710-1']);
+	_gaq.push(['_trackPageview']);	_gaq.push(['_trackPageLoadTime']);
+
+	
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script><script>
+	
+	_gaq.push(["_setCustomVar", 1, "member-type", "None", 1]); 
+	</script>
+<script type="text/javascript">
+	var _kmq = _kmq || [];
+	var _kmk = _kmk || 'a508b4add19323fc5645cbbb6cde7d58a237bc40';
+	function _kms(u){
+		setTimeout(function(){
+			var d = document, f = d.getElementsByTagName('script')[0],
+					s = d.createElement('script');
+			s.type = 'text/javascript'; s.async = true; s.src = u;
+			f.parentNode.insertBefore(s, f);
+		}, 1);
+	}
+	_kms('//i.kissmetrics.com/i.js');
+	_kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+<script src="//assets.adobedtm.com/376c5346e33126fdb6b2dbac81e307cbacfd7935/satelliteLib-4a7497b2b1d1900fe42ef2c13e32daeedf9c1642-staging.js"></script>
+<script type="text/javascript">
+var pageData = {
+	page: {
+		businessUnit:		"ELS:RAP:ST",
+		language:			"en",
+		loadTime:			"-646",
+		loadTimeStamp:		"1453201455000",
+		name:				"papers",
+		productName:		"MD",
+		environment:		"live",
+		noTracking:			"false",
+		type:				"NP-GP"
+	},
+	visitor: {
+		accountId:		"",
+		accountName:	"",
+		loginStatus:	"anonymous",
+		loginSuccess:	"false",
+		ipAddress:		"104.155.42.201"
+	}
+};
+</script>
+
+
+</head>
+
+<body class="overview-layout">
+
+	
+			
+	
+	
+    <div class="masterbrand-header">
+	<header class="masthead">
+  <div class="with-container">
+    <a href="/" title="Mendeley" class="logo">Mendeley</a>
+
+    <button type="button" class="mobile-button js-menu-slider-handler">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+    </button>
+
+    <button type="button" class="mobile-button js-masthead-search-handler">
+      <span class="with-icon-before icon-search"></span>
+    </button>
+
+
+    <nav class="js-menu-slider">
+      <ul class="horizontal-list js-dropdown">
+
+        <li><a href="https://www.mendeley.com/" title="What is Mendeley?">What is Mendeley?</a></li>
+        <li class="button-group">
+          <a href="https://www.mendeley.com/join/" title="Create a free account" class="button-primary button-small">Create a free account</a>
+          <a href="https://www.mendeley.com/sign-in/?routeTo=https%3A%2F%2Fwww.mendeley.com%2Fresearch-papers%2Fsearch%2F%3Fquery%3Dthin%2Bply%2Bmechanics" class="button-secondary button-small">Sign In</a>
+        </li>
+
+
+        <li class="search">
+          <a href="#" class="with-icon-after icon-search js-masthead-search-handler js-skip-siblings"></a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <nav class="masthead-search js-masthead-search">
+       <div class="tabs js-tabs">
+         <ul class="nav-tabs">
+           <li class="active-tab" data-tab="search-tab-papers">Papers</li>
+           <li data-tab="search-tab-people">People</li>
+           <li data-tab="search-tab-groups">Groups</li>
+           <li data-tab="search-tab-support">Support</li>
+         </ul>
+         <div class="content-tabs">
+           <div data-tab="search-tab-papers">
+             <form class="masthead-search-field" action="https://www.mendeley.com/research-papers/search/">
+               <span class="with-icon-before icon-search"></span>
+               <input type="text" name="query" placeholder="e.g. Graphene">
+               <input type="hidden" value="research-papers">
+               <button class="button-primary" type="submit">Search</button>
+             </form>
+           </div>
+           <div data-tab="search-tab-people">
+             <form class="masthead-search-field" action="https://www.mendeley.com/people/search/">
+               <span class="with-icon-before icon-search"></span>
+               <input type="text" name="query" placeholder="e.g. Victor Henning">
+               <input type="hidden" value="people">
+               <button class="button-primary" type="submit">Search</button>
+             </form>
+           </div>
+           <div data-tab="search-tab-groups">
+             <form class="masthead-search-field" action="https://www.mendeley.com/groups/search/">
+               <span class="with-icon-before icon-search"></span>
+               <input type="text" name="query" placeholder="e.g. Data Science">
+               <input type="hidden" value="groups">
+               <button class="button-primary" type="submit">Search</button>
+             </form>
+           </div>
+           <div data-tab="search-tab-support">
+             <form class="masthead-search-field" action="http://support.mendeley.com/customer/portal/articles/search" method="get">
+               <span class="with-icon-before icon-search"></span>
+               <input type="text" name="q" placeholder="e.g. Forgot password">
+               <input type="hidden" value="groups">
+               <button class="button-primary" type="submit">Search</button>
+             </form>
+           </div>
+         </div>
+       </div>
+     </nav>
+
+  </div>
+</header>
+
+</div>
+
+
+	<div id="wrapper">
+		
+	<div id="main-container">
+	<div id="content-container">
+		<div id="main-content">
+							<div class="heading">
+	<div class="padding unfloat">
+		<div class="papers-overview">
+			<h1>Papers</h1>
+		</div>
+
+		<div class="column-b">
+			<div class="action-buttons"><a href="/join/?_section=button" data-join-overlay="button" class="link-button primary">Create a free account</a></div>
+		</div>
+	</div>
+</div>
+
+<div id="search-bar">
+	<div class="specific-search"><div class="search"><form action="/research-papers/search/" method="get" onsubmit="return Mendeley.Search.checkSearch(this);"><div class="search-box"><input onfocus="Mendeley.Search.inputFocus('focus', this, 'research-papers');" onblur="Mendeley.Search.inputFocus('blur', this, 'research-papers');" type="text" name="query" value="thin ply mechanics" ><input type="hidden" class="search-label" value="research-papers"></div><button class="search-btn" id="simple-search" type="submit">Search</button></form></div><div class="unfloat"><div class="advanced-search-example left">eg: <a href="/research-papers/search/?query=scientific+impact+measures" style="color:inherit" rel="nofollow">scientific impact measures</a></div><div class="advanced-search-link right"><a href="/research-papers/search/" rel="nofollow">Advanced search</a></div></div></div>
+
+	
+	<div class="clear"></div>
+</div>
+
+
+<div class="column-a">
+	
+
+	
+		<div class="padding">
+		
+	
+	
+
+<div class="pagination-container">
+			<div class="pagination-results">
+			Results
+			<strong>1 - 20</strong> of
+			<strong>582,587</strong>
+					</div>
+	
+		<div class="pagination-pages">
+
+<div class="pagemenu">
+		
+								
+		
+							
+							
+		
+				
+		
+										
+							
+		
+					<div class="arrow-disabled">Prev</div>
+			<img class="arrow-next-prev" src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/graphics/pagination/prev-disabled.png" alt="&lt;" title="Previous page" width="7" height="10">
+		
+		<ul>
+			
+							<li class="selected">1</li>
+			
+			
+												<li><a rel="nofollow" href="/research-papers/search/?query=thin+ply+mechanics&amp;page=1"  class="page">2</a></li>
+																<li><a rel="nofollow" href="/research-papers/search/?query=thin+ply+mechanics&amp;page=2"  class="page">3</a></li>
+							
+			
+							<li><a rel="nofollow" href="/research-papers/search/?query=thin+ply+mechanics&amp;page=29129"  class="page">… 29130</a></li>
+					</ul>
+
+		
+		<a href="/research-papers/search/?query=thin+ply+mechanics&amp;page=1"  class="pagemenu_next">			<img src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/graphics/pagination/next.png" alt="&gt;" title="Next page" class="arrow-next-prev" width="7" height="10">
+			<div class="arrow-enabled">Next</div>
+		</a>
+</div>
+
+
+<script>Mendeley.Paginator.paginate = true;</script>
+</div>
+	
+	<div style="clear:both"></div>
+</div>
+
+
+<ol class="item-list documents">
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="cac4fe42-4100-3b3d-af25-e846c47c576e" class="clearfix item document   " id="document-cac4fe42-4100-3b3d-af25-e846c47c576e" data-doc="{&quot;title&quot;:&quot;A composite ply failure model based on continuum damage mechanics&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;02638223&quot;,&quot;doi&quot;:&quot;10.1016\/j.compstruct.2003.11.010&quot;},&quot;issue&quot;:&quot;3-4&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composite Structures&quot;,&quot;year&quot;:2004,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;&quot;,&quot;pages&quot;:&quot;347-355&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/research\/composite-ply-failure-model-based-continuum-damage-mechanics-2\/&quot;,&quot;volume&quot;:&quot;65&quot;,&quot;path&quot;:&quot;\/research\/composite-ply-failure-model-based-continuum-damage-mechanics-2\/&quot;,&quot;canonicalId&quot;:&quot;cac4fe42-4100-3b3d-af25-e846c47c576e&quot;}">
+		<div class="item-info">
+		<div class="title">
+			<a  href="/research/composite-ply-failure-model-based-continuum-damage-mechanics-2/" title="A composite ply failure model based on continuum damage mechanics" target="_parent" data-log-action="Title" data-log-action="Title">A composite <strong>ply</strong> failure model based on continuum damage <strong>mechanics</strong></a>
+		</div>
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2004&amp;rft.volume=65&amp;rft.issue=3-4&amp;rft.pages=347-355&amp;rft.atitle=A+composite+ply+failure+model+based+on+continuum+damage+mechanics&amp;rft.jtitle=Composite+Structures&amp;rft.title=Composite+Structures&amp;rft.aulast=Edlund&amp;rft.aufirst=Ulf&amp;rft.au=Volgers%2C+Pieter&amp;rft_id=info%3Adoi%2F10.1016%2Fj.compstruct.2003.11.010&amp;rft.issn=02638223"></span>
+		<div class="metadata">
+			<span class="authors">
+				<span class="author">Ulf Edlund</span><span class="sep">, </span>
+				<span class="author">Pieter Volgers</span>
+			</span><span class="sep">in</span>
+			<span class="publication">Composite Structures</span>
+			<span class="year">(2004)</span>
+		</div>
+		<div class="abstract">A material model including the failure behaviour is derived for a <strong>thin</strong> unidirectional (UD) composite <strong>ply</strong>. The model is derived within a thermodynamic framework and the failure behaviour is modelled using continuum…</div>
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_cac4fe42-4100-3b3d-af25-e846c47c576e" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_cac4fe42-4100-3b3d-af25-e846c47c576e"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=composite-ply-failure-model-based-continuum-damage-mechanics-2' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="16 readers on Mendeley"><strong>16</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="2a4a43a3-5e29-372f-bbae-7a13b1586069" class="clearfix item document   " id="document-2a4a43a3-5e29-372f-bbae-7a13b1586069" data-doc="{&quot;title&quot;:&quot;Notched response of non-crimp fabric thin-ply laminates&quot;,&quot;identifiers&quot;:{&quot;eid&quot;:&quot;2-s2.0-84885076549&quot;,&quot;issn&quot;:&quot;02663538&quot;,&quot;doi&quot;:&quot;10.1016\/j.compscitech.2013.02.001&quot;,&quot;sgr&quot;:&quot;84885076549&quot;},&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composites Science and Technology&quot;,&quot;publisher&quot;:&quot;Elsevier Ltd&quot;,&quot;year&quot;:2013,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/linkinghub.elsevier.com\/retrieve\/pii\/S0266353813000390&quot;,&quot;pages&quot;:&quot;97-114&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/notched-response-noncrimp-fabric-thinply-laminates\/&quot;,&quot;volume&quot;:&quot;79&quot;,&quot;path&quot;:&quot;\/catalog\/notched-response-noncrimp-fabric-thinply-laminates\/&quot;,&quot;canonicalId&quot;:&quot;2a4a43a3-5e29-372f-bbae-7a13b1586069&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/notched-response-noncrimp-fabric-thinply-laminates/" title="Notched response of non-crimp fabric thin-ply laminates" target="_parent" data-log-action="Title" data-log-action="Title">Notched response of non-crimp fabric <strong>thin</strong>-<strong>ply</strong> laminates</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2013&amp;rft.volume=79&amp;rft.pages=97-114&amp;rft.atitle=Notched+response+of+non-crimp+fabric+thin-ply+laminates&amp;rft.jtitle=Composites+Science+and+Technology&amp;rft.title=Composites+Science+and+Technology&amp;rft.aulast=Arteiro&amp;rft.auinit1=a&amp;rft.au=Catalanotti%2C+G.&amp;rft.au=Xavier%2C+J.&amp;rft.au=Camanho%2C+P.P.&amp;rft_id=info%3Adoi%2F10.1016%2Fj.compscitech.2013.02.001&amp;rft.issn=02663538"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">a. Arteiro</span><span class="sep">, </span>																				<span class="author">G. Catalanotti</span><span class="sep">, </span>																				<span class="author">J. Xavier</span><span class="sep">, </span>																				<span class="author">P.P. Camanho</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composites Science and Technology</span>
+			
+			<span class="year">(2013)</span>		</div>
+
+					<div class="abstract">Analysis methods to predict the open-hole tensile and compressive response of <strong>thin</strong>-<strong>ply</strong> non-crimp</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_2a4a43a3-5e29-372f-bbae-7a13b1586069" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_2a4a43a3-5e29-372f-bbae-7a13b1586069"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=notched-response-noncrimp-fabric-thinply-laminates' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="19 readers on Mendeley"><strong>19</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="099f9d6d-9c3e-3bef-8ab7-ad60e8b5f159" class="clearfix item document   " id="document-099f9d6d-9c3e-3bef-8ab7-ad60e8b5f159" data-doc="{&quot;title&quot;:&quot;Damage-mechanics analysis of matrix cracking in cross-ply CFRP laminates under thermal fatigue&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;02663538&quot;,&quot;isbn&quot;:&quot;0266-3538&quot;,&quot;doi&quot;:&quot;10.1016\/S0266-3538(01)00077-X&quot;},&quot;issue&quot;:&quot;12&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composites Science and Technology&quot;,&quot;year&quot;:2001,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;&quot;,&quot;pages&quot;:&quot;1735-1742&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/research\/damagemechanics-analysis-matrix-cracking-crossply-cfrp-laminates-under-thermal-fatigue\/&quot;,&quot;volume&quot;:&quot;61&quot;,&quot;path&quot;:&quot;\/research\/damagemechanics-analysis-matrix-cracking-crossply-cfrp-laminates-under-thermal-fatigue\/&quot;,&quot;canonicalId&quot;:&quot;099f9d6d-9c3e-3bef-8ab7-ad60e8b5f159&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/research/damagemechanics-analysis-matrix-cracking-crossply-cfrp-laminates-under-thermal-fatigue/" title="Damage-mechanics analysis of matrix cracking in cross-ply CFRP laminates under thermal fatigue" target="_parent" data-log-action="Title" data-log-action="Title">Damage-<strong>mechanics</strong> analysis of matrix cracking in cross-<strong>ply</strong> CFRP laminates under thermal fatigue</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2001&amp;rft.volume=61&amp;rft.issue=12&amp;rft.pages=1735-1742&amp;rft.atitle=Damage-mechanics+analysis+of+matrix+cracking+in+cross-ply+CFRP+laminates+under+thermal+fatigue&amp;rft.jtitle=Composites+Science+and+Technology&amp;rft.title=Composites+Science+and+Technology&amp;rft.aulast=Kobayashi&amp;rft.aufirst=Satoshi&amp;rft.au=Terada%2C+Kazuhiro&amp;rft.au=Ogihara%2C+Shinji&amp;rft.au=Takeda%2C+Nobuo&amp;rft_id=info%3Adoi%2F10.1016%2FS0266-3538%2801%2900077-X&amp;rft.issn=02663538&amp;rft.isbn=0266-3538"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">Satoshi Kobayashi</span><span class="sep">, </span>																				<span class="author">Kazuhiro Terada</span><span class="sep">, </span>																				<span class="author">Shinji Ogihara</span><span class="sep">, </span>																				<span class="author">Nobuo Takeda</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composites Science and Technology</span>
+			
+			<span class="year">(2001)</span>		</div>
+
+					<div class="abstract"> as great as in a 90?? <strong>ply</strong>. To discuss these experimental results, a damage-<strong>mechanics</strong> analysis</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_099f9d6d-9c3e-3bef-8ab7-ad60e8b5f159" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_099f9d6d-9c3e-3bef-8ab7-ad60e8b5f159"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=damagemechanics-analysis-matrix-cracking-crossply-cfrp-laminates-under-thermal-fatigue' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="22 readers on Mendeley"><strong>22</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="36f64d1e-ec75-3814-82b7-c21f134eeac9" class="clearfix item document   " id="document-36f64d1e-ec75-3814-82b7-c21f134eeac9" data-doc="{&quot;title&quot;:&quot;Large damage capability of non-crimp fabric thin-ply laminates&quot;,&quot;identifiers&quot;:{&quot;eid&quot;:&quot;2-s2.0-84900840169&quot;,&quot;issn&quot;:&quot;1359835X&quot;,&quot;doi&quot;:&quot;10.1016\/j.compositesa.2014.04.002&quot;,&quot;sgr&quot;:&quot;84900840169&quot;},&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composites Part A: Applied Science and Manufacturing&quot;,&quot;publisher&quot;:&quot;Elsevier Ltd&quot;,&quot;year&quot;:2014,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/dx.doi.org\/10.1016\/j.compositesa.2014.04.002&quot;,&quot;pages&quot;:&quot;110-122&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/large-damage-capability-noncrimp-fabric-thinply-laminates\/&quot;,&quot;volume&quot;:&quot;63&quot;,&quot;path&quot;:&quot;\/catalog\/large-damage-capability-noncrimp-fabric-thinply-laminates\/&quot;,&quot;canonicalId&quot;:&quot;36f64d1e-ec75-3814-82b7-c21f134eeac9&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/large-damage-capability-noncrimp-fabric-thinply-laminates/" title="Large damage capability of non-crimp fabric thin-ply laminates" target="_parent" data-log-action="Title" data-log-action="Title">Large damage capability of non-crimp fabric <strong>thin</strong>-<strong>ply</strong> laminates</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2014&amp;rft.volume=63&amp;rft.pages=110-122&amp;rft.atitle=Large+damage+capability+of+non-crimp+fabric+thin-ply+laminates&amp;rft.jtitle=Composites+Part+A%3A+Applied+Science+and+Manufacturing&amp;rft.title=Composites+Part+A%3A+Applied+Science+and+Manufacturing&amp;rft.aulast=Arteiro&amp;rft.auinit1=A&amp;rft.au=Catalanotti%2C+G.&amp;rft.au=Xavier%2C+J.&amp;rft.au=Camanho%2C+P.+P.&amp;rft_id=info%3Adoi%2F10.1016%2Fj.compositesa.2014.04.002&amp;rft.issn=1359835X"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">A. Arteiro</span><span class="sep">, </span>																				<span class="author">G. Catalanotti</span><span class="sep">, </span>																				<span class="author">J. Xavier</span><span class="sep">, </span>																				<span class="author">P. P. Camanho</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composites Part A: Applied Science and Manufacturing</span>
+			
+			<span class="year">(2014)</span>		</div>
+
+					<div class="abstract">The residual strength of <strong>thin</strong>-<strong>ply</strong> non-crimp fabric laminates with large through-the-thickness cracks is investigated in this paper. Analysis methods such as the linear elastic fracture <strong>mechanics</strong></div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_36f64d1e-ec75-3814-82b7-c21f134eeac9" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_36f64d1e-ec75-3814-82b7-c21f134eeac9"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=large-damage-capability-noncrimp-fabric-thinply-laminates' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="24 readers on Mendeley"><strong>24</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="31143c59-d47b-3214-bef9-c96695611c02" class="clearfix item document   " id="document-31143c59-d47b-3214-bef9-c96695611c02" data-doc="{&quot;title&quot;:&quot;Pseudo-ductility and damage suppression in thin ply {CFRP} angle-ply laminates&quot;,&quot;identifiers&quot;:{&quot;eid&quot;:&quot;2-s2.0-84911919887&quot;,&quot;issn&quot;:&quot;1359-835X&quot;,&quot;doi&quot;:&quot;http:\/\/dx.doi.org\/10.1016\/j.compositesa.2014.11.004&quot;,&quot;sgr&quot;:&quot;84911919887&quot;},&quot;issue&quot;:&quot;0&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composites Part A: Applied Science and Manufacturing&quot;,&quot;year&quot;:2015,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/www.sciencedirect.com\/science\/article\/pii\/S1359835X1400342X&quot;,&quot;pages&quot;:&quot;64-71&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/research\/pseudoductility-damage-suppression-thin-ply-cfrp-angleply-laminates\/&quot;,&quot;volume&quot;:&quot;69&quot;,&quot;path&quot;:&quot;\/research\/pseudoductility-damage-suppression-thin-ply-cfrp-angleply-laminates\/&quot;,&quot;canonicalId&quot;:&quot;31143c59-d47b-3214-bef9-c96695611c02&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/research/pseudoductility-damage-suppression-thin-ply-cfrp-angleply-laminates/" title="Pseudo-ductility and damage suppression in thin ply {CFRP} angle-ply laminates" target="_parent" data-log-action="Title" data-log-action="Title">Pseudo-ductility and damage suppression in <strong>thin</strong> <strong>ply</strong> {CFRP} angle-<strong>ply</strong> laminates</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2015&amp;rft.volume=69&amp;rft.pages=64-71&amp;rft.atitle=Pseudo-ductility+and+damage+suppression+in+thin+ply+%7BCFRP%7D+angle-ply+laminates&amp;rft.jtitle=Composites+Part+A%3A+Applied+Science+and+Manufacturing&amp;rft.title=Composites+Part+A%3A+Applied+Science+and+Manufacturing&amp;rft.aulast=Fuller&amp;rft.aufirst=J+D&amp;rft.au=Wisnom%2C+M+R&amp;rft_id=info%3Adoi%2Fhttp%3A%2F%2Fdx.doi.org%2F10.1016%2Fj.compositesa.2014.11.004&amp;rft.issn=1359-835X"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">J D Fuller</span><span class="sep">, </span>																				<span class="author">M R Wisnom</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composites Part A: Applied Science and Manufacturing</span>
+			
+			<span class="year">(2015)</span>		</div>
+
+					<div class="abstract"> by using <strong>thin</strong> plies. This paper presents an experimental study, using a spread tow <strong>thin</strong> <strong>ply</strong> carbon–epoxy prepreg material with a cured <strong>ply</strong> thickness of 0.03&#xa0;mm, which shows…</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_31143c59-d47b-3214-bef9-c96695611c02" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_31143c59-d47b-3214-bef9-c96695611c02"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=pseudoductility-damage-suppression-thin-ply-cfrp-angleply-laminates' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="20 readers on Mendeley"><strong>20</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="487d7de1-c2f4-3458-815b-b2ae2883f149" class="clearfix item document   " id="document-487d7de1-c2f4-3458-815b-b2ae2883f149" data-doc="{&quot;title&quot;:&quot;Experimental studies of thin-ply laminated composites&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;02663538&quot;,&quot;isbn&quot;:&quot;0266-3538&quot;,&quot;doi&quot;:&quot;10.1016\/j.compscitech.2006.06.008&quot;},&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composites Science and Technology&quot;,&quot;year&quot;:2007,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;&quot;,&quot;pages&quot;:&quot;996-1008&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/experimental-studies-thinply-laminated-composites\/&quot;,&quot;volume&quot;:&quot;67&quot;,&quot;path&quot;:&quot;\/catalog\/experimental-studies-thinply-laminated-composites\/&quot;,&quot;canonicalId&quot;:&quot;487d7de1-c2f4-3458-815b-b2ae2883f149&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/experimental-studies-thinply-laminated-composites/" title="Experimental studies of thin-ply laminated composites" target="_parent" data-log-action="Title" data-log-action="Title">Experimental studies of <strong>thin</strong>-<strong>ply</strong> laminated composites</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2007&amp;rft.volume=67&amp;rft.pages=996-1008&amp;rft.atitle=Experimental+studies+of+thin-ply+laminated+composites&amp;rft.jtitle=Composites+Science+and+Technology&amp;rft.title=Composites+Science+and+Technology&amp;rft.aulast=Sihn&amp;rft.aufirst=Sangwook&amp;rft.au=Kim%2C+Ran+Y.&amp;rft.au=Kawabe%2C+Kazumasa&amp;rft.au=Tsai%2C+Stephen+W.&amp;rft_id=info%3Adoi%2F10.1016%2Fj.compscitech.2006.06.008&amp;rft.issn=02663538&amp;rft.isbn=0266-3538"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">Sangwook Sihn</span><span class="sep">, </span>																				<span class="author">Ran Y. Kim</span><span class="sep">, </span>																				<span class="author">Kazumasa Kawabe</span><span class="sep">, </span>																				<span class="author">Stephen W. Tsai</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composites Science and Technology</span>
+			
+			<span class="year">(2007)</span>		</div>
+
+					<div class="abstract">A new processing method was developed for spreading fiber tows to make <strong>thin</strong>-<strong>ply</strong> laminated</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_487d7de1-c2f4-3458-815b-b2ae2883f149" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_487d7de1-c2f4-3458-815b-b2ae2883f149"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=experimental-studies-thinply-laminated-composites' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="62 readers on Mendeley"><strong>62</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="3e120a6e-7872-3b9c-86bc-e2e1e8b27bb3" class="clearfix item document   " id="document-3e120a6e-7872-3b9c-86bc-e2e1e8b27bb3" data-doc="{&quot;title&quot;:&quot;Experimental characterization of strength and damage resistance properties of thin-ply carbon fiber\/toughened epoxy laminates&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;02638223&quot;,&quot;isbn&quot;:&quot;0263-8223&quot;,&quot;doi&quot;:&quot;10.1016\/j.compstruct.2007.01.015&quot;},&quot;issue&quot;:&quot;3&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composite Structures&quot;,&quot;year&quot;:2008,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/linkinghub.elsevier.com\/retrieve\/pii\/S0263822307000219\\nhttp:\/\/dx.doi.org\/10.1016\/j.compstruct.2007.01.015&quot;,&quot;pages&quot;:&quot;382-389&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/experimental-characterization-strength-damage-resistance-properties-thinply-carbon-fibertoughened-ep\/&quot;,&quot;volume&quot;:&quot;82&quot;,&quot;path&quot;:&quot;\/catalog\/experimental-characterization-strength-damage-resistance-properties-thinply-carbon-fibertoughened-ep\/&quot;,&quot;canonicalId&quot;:&quot;3e120a6e-7872-3b9c-86bc-e2e1e8b27bb3&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/experimental-characterization-strength-damage-resistance-properties-thinply-carbon-fibertoughened-ep/" title="Experimental characterization of strength and damage resistance properties of thin-ply carbon fiber/toughened epoxy laminates" target="_parent" data-log-action="Title" data-log-action="Title">Experimental characterization of strength and damage resistance properties of <strong>thin</strong>-<strong>ply</strong> carbon fiber/toughened epoxy laminates</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2008&amp;rft.volume=82&amp;rft.issue=3&amp;rft.pages=382-389&amp;rft.atitle=Experimental+characterization+of+strength+and+damage+resistance+properties+of+thin-ply+carbon+fiber%2Ftoughened+epoxy+laminates&amp;rft.jtitle=Composite+Structures&amp;rft.title=Composite+Structures&amp;rft.aulast=Yokozeki&amp;rft.aufirst=Tomohiro&amp;rft.au=Aoki%2C+Yuichiro&amp;rft.au=Ogasawara%2C+Toshio&amp;rft_id=info%3Adoi%2F10.1016%2Fj.compstruct.2007.01.015&amp;rft.issn=02638223&amp;rft.isbn=0263-8223"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">Tomohiro Yokozeki</span><span class="sep">, </span>																				<span class="author">Yuichiro Aoki</span><span class="sep">, </span>																				<span class="author">Toshio Ogasawara</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composite Structures</span>
+			
+			<span class="year">(2008)</span>		</div>
+
+					<div class="abstract">Composite laminates manufactured from <strong>thin</strong>-<strong>ply</strong> prepregs are expected to have superior damage resistance properties compared to those from standard prepregs. Although the use of…</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_3e120a6e-7872-3b9c-86bc-e2e1e8b27bb3" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_3e120a6e-7872-3b9c-86bc-e2e1e8b27bb3"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=experimental-characterization-strength-damage-resistance-properties-thinply-carbon-fibertoughened-ep' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="36 readers on Mendeley"><strong>36</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="138253c8-2c1a-38a6-9ca2-73538a04ed7c" class="clearfix item document   " id="document-138253c8-2c1a-38a6-9ca2-73538a04ed7c" data-doc="{&quot;title&quot;:&quot;Damage characterization in thin-ply composite laminates under out-of-plane transverse loadings&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;02638223&quot;,&quot;isbn&quot;:&quot;0263-8223&quot;,&quot;doi&quot;:&quot;10.1016\/j.compstruct.2010.06.016&quot;},&quot;issue&quot;:&quot;1&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composite Structures&quot;,&quot;year&quot;:2010,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/www.sciencedirect.com\/science\/article\/pii\/S0263822310002254&quot;,&quot;pages&quot;:&quot;49-57&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/damage-characterization-thinply-composite-laminates-under-outofplane-transverse-loadings\/&quot;,&quot;volume&quot;:&quot;93&quot;,&quot;path&quot;:&quot;\/catalog\/damage-characterization-thinply-composite-laminates-under-outofplane-transverse-loadings\/&quot;,&quot;canonicalId&quot;:&quot;138253c8-2c1a-38a6-9ca2-73538a04ed7c&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/damage-characterization-thinply-composite-laminates-under-outofplane-transverse-loadings/" title="Damage characterization in thin-ply composite laminates under out-of-plane transverse loadings" target="_parent" data-log-action="Title" data-log-action="Title">Damage characterization in <strong>thin</strong>-<strong>ply</strong> composite laminates under out-of-plane transverse loadings</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2010&amp;rft.volume=93&amp;rft.issue=1&amp;rft.pages=49-57&amp;rft.atitle=Damage+characterization+in+thin-ply+composite+laminates+under+out-of-plane+transverse+loadings&amp;rft.jtitle=Composite+Structures&amp;rft.title=Composite+Structures&amp;rft.aulast=Yokozeki&amp;rft.aufirst=Tomohiro&amp;rft.au=Kuroda%2C+Akiko&amp;rft.au=Yoshimura%2C+Akinori&amp;rft.au=Ogasawara%2C+Toshio&amp;rft.au=Aoki%2C+Takahira&amp;rft_id=info%3Adoi%2F10.1016%2Fj.compstruct.2010.06.016&amp;rft.issn=02638223&amp;rft.isbn=0263-8223"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">Tomohiro Yokozeki</span><span class="sep">, </span>																				<span class="author">Akiko Kuroda</span><span class="sep">, </span>																				<span class="author">Akinori Yoshimura</span><span class="sep">, </span>																				<span class="author">Toshio Ogasawara</span><span class="sep">, </span>																				<span class="author">Takahira Aoki</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composite Structures</span>
+			
+			<span class="year">(2010)</span>		</div>
+
+					<div class="abstract">Composite laminates with <strong>thin</strong>-<strong>ply</strong> layers are expected to exhibit superior damage resistance</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_138253c8-2c1a-38a6-9ca2-73538a04ed7c" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_138253c8-2c1a-38a6-9ca2-73538a04ed7c"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=damage-characterization-thinply-composite-laminates-under-outofplane-transverse-loadings' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="37 readers on Mendeley"><strong>37</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="65267369-a2f0-3ccb-833c-4e406d41c97e" class="clearfix item document   " id="document-65267369-a2f0-3ccb-833c-4e406d41c97e" data-doc="{&quot;title&quot;:&quot;Demonstration of pseudo-ductility in high performance glass\/epoxy composites by hybridisation with thin-ply carbon prepreg&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;1359835X&quot;,&quot;doi&quot;:&quot;10.1016\/j.compositesa.2013.04.006&quot;},&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composites Part A: Applied Science and Manufacturing&quot;,&quot;year&quot;:2013,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/www.sciencedirect.com\/science\/article\/pii\/S1359835X13001176&quot;,&quot;pages&quot;:&quot;23-30&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/demonstration-pseudoductility-high-performance-glassepoxy-composites-hybridisation-thinply-carbon-pr\/&quot;,&quot;volume&quot;:&quot;52&quot;,&quot;path&quot;:&quot;\/catalog\/demonstration-pseudoductility-high-performance-glassepoxy-composites-hybridisation-thinply-carbon-pr\/&quot;,&quot;canonicalId&quot;:&quot;65267369-a2f0-3ccb-833c-4e406d41c97e&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/demonstration-pseudoductility-high-performance-glassepoxy-composites-hybridisation-thinply-carbon-pr/" title="Demonstration of pseudo-ductility in high performance glass/epoxy composites by hybridisation with thin-ply carbon prepreg" target="_parent" data-log-action="Title" data-log-action="Title">Demonstration of pseudo-ductility in high performance glass/epoxy composites by hybridisation with <strong>thin</strong>-<strong>ply</strong> carbon prepreg</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2013&amp;rft.volume=52&amp;rft.pages=23-30&amp;rft.atitle=Demonstration+of+pseudo-ductility+in+high+performance+glass%2Fepoxy+composites+by+hybridisation+with+thin-ply+carbon+prepreg&amp;rft.jtitle=Composites+Part+A%3A+Applied+Science+and+Manufacturing&amp;rft.title=Composites+Part+A%3A+Applied+Science+and+Manufacturing&amp;rft.aulast=Cz%C3%A9l&amp;rft.aufirst=Gergely&amp;rft.au=Wisnom%2C+M.R.&amp;rft_id=info%3Adoi%2F10.1016%2Fj.compositesa.2013.04.006&amp;rft.issn=1359835X"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">Gergely Czél</span><span class="sep">, </span>																				<span class="author">M.R. Wisnom</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composites Part A: Applied Science and Manufacturing</span>
+			
+			<span class="year">(2013)</span>		</div>
+
+					<div class="abstract"> is the use of <strong>thin</strong>-<strong>ply</strong> hybrid laminates. Fracture <strong>mechanics</strong> calculations were carried out to determine</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_65267369-a2f0-3ccb-833c-4e406d41c97e" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_65267369-a2f0-3ccb-833c-4e406d41c97e"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=demonstration-pseudoductility-high-performance-glassepoxy-composites-hybridisation-thinply-carbon-pr' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="37 readers on Mendeley"><strong>37</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="e034f7c2-c573-3edd-a9e3-738544f6433e" class="clearfix item document   " id="document-e034f7c2-c573-3edd-a9e3-738544f6433e" data-doc="{&quot;title&quot;:&quot;Thin ply composites: Experimental characterization and modeling of size-effects&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;02663538&quot;,&quot;isbn&quot;:&quot;02663538&quot;,&quot;doi&quot;:&quot;10.1016\/j.compscitech.2014.06.027&quot;},&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composites Science and Technology&quot;,&quot;publisher&quot;:&quot;Elsevier Ltd&quot;,&quot;year&quot;:2014,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/dx.doi.org\/10.1016\/j.compscitech.2014.06.027&quot;,&quot;pages&quot;:&quot;121-132&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/thin-ply-composites-experimental-characterization-modeling-sizeeffects\/&quot;,&quot;volume&quot;:&quot;101&quot;,&quot;path&quot;:&quot;\/catalog\/thin-ply-composites-experimental-characterization-modeling-sizeeffects\/&quot;,&quot;canonicalId&quot;:&quot;e034f7c2-c573-3edd-a9e3-738544f6433e&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/thin-ply-composites-experimental-characterization-modeling-sizeeffects/" title="Thin ply composites: Experimental characterization and modeling of size-effects" target="_parent" data-log-action="Title" data-log-action="Title"><strong>Thin</strong> <strong>ply</strong> composites: Experimental characterization and modeling of size-effects</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2014&amp;rft.volume=101&amp;rft.pages=121-132&amp;rft.atitle=Thin+ply+composites%3A+Experimental+characterization+and+modeling+of+size-effects&amp;rft.jtitle=Composites+Science+and+Technology&amp;rft.title=Composites+Science+and+Technology&amp;rft.aulast=Amacher&amp;rft.auinit1=R&amp;rft.au=Cugnoni%2C+J.&amp;rft.au=Botsis%2C+J.&amp;rft.au=Sorensen%2C+L.&amp;rft.au=Smith%2C+W.&amp;rft.au=Dransfeld%2C+C.&amp;rft_id=info%3Adoi%2F10.1016%2Fj.compscitech.2014.06.027&amp;rft.issn=02663538&amp;rft.isbn=02663538"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">R. Amacher</span><span class="sep">, </span>																				<span class="author">J. Cugnoni</span><span class="sep">, </span>																				<span class="author">J. Botsis</span><span class="sep">, </span>																				<span class="author">L. Sorensen</span><span class="sep">, </span>																				<span class="author">W. Smith</span><span class="sep">, </span>																				<span class="author">C. Dransfeld</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composites Science and Technology</span>
+			
+			<span class="year">(2014)</span>		</div>
+
+					<div class="abstract"><strong>Thin</strong>-<strong>ply</strong> composites are rapidly gaining interest in the composite industry, not only because</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_e034f7c2-c573-3edd-a9e3-738544f6433e" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_e034f7c2-c573-3edd-a9e3-738544f6433e"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=thin-ply-composites-experimental-characterization-modeling-sizeeffects' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="28 readers on Mendeley"><strong>28</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="533b876e-1598-3a94-ace7-115cb0e18ce1" class="clearfix item document   " id="document-533b876e-1598-3a94-ace7-115cb0e18ce1" data-doc="{&quot;title&quot;:&quot;Influence of woven ply degradation on fatigue crack growth in thin notched composites under tensile loading&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;01421123&quot;,&quot;doi&quot;:&quot;10.1016\/j.ijfatigue.2009.01.010&quot;},&quot;issue&quot;:&quot;1&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;International Journal of Fatigue&quot;,&quot;publisher&quot;:&quot;Elsevier Ltd&quot;,&quot;year&quot;:2010,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/dx.doi.org\/10.1016\/j.ijfatigue.2009.01.010&quot;,&quot;pages&quot;:&quot;60-65&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/research\/influence-woven-ply-degradation-fatigue-crack-growth-thin-notched-composites-under-tensile-loading\/&quot;,&quot;volume&quot;:&quot;32&quot;,&quot;path&quot;:&quot;\/research\/influence-woven-ply-degradation-fatigue-crack-growth-thin-notched-composites-under-tensile-loading\/&quot;,&quot;canonicalId&quot;:&quot;533b876e-1598-3a94-ace7-115cb0e18ce1&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/research/influence-woven-ply-degradation-fatigue-crack-growth-thin-notched-composites-under-tensile-loading/" title="Influence of woven ply degradation on fatigue crack growth in thin notched composites under tensile loading" target="_parent" data-log-action="Title" data-log-action="Title">Influence of woven <strong>ply</strong> degradation on fatigue crack growth in <strong>thin</strong> notched composites under tensile loading</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2010&amp;rft.volume=32&amp;rft.issue=1&amp;rft.pages=60-65&amp;rft.atitle=Influence+of+woven+ply+degradation+on+fatigue+crack+growth+in+thin+notched+composites+under+tensile+loading&amp;rft.jtitle=International+Journal+of+Fatigue&amp;rft.title=International+Journal+of+Fatigue&amp;rft.aulast=Bizeul&amp;rft.auinit1=M&amp;rft.au=Bouvet%2C+C.&amp;rft.au=Barrau%2C+J.+J.&amp;rft.au=Cuenca%2C+R.&amp;rft_id=info%3Adoi%2F10.1016%2Fj.ijfatigue.2009.01.010&amp;rft.issn=01421123"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">M. Bizeul</span><span class="sep">, </span>																				<span class="author">C. Bouvet</span><span class="sep">, </span>																				<span class="author">J. J. Barrau</span><span class="sep">, </span>																				<span class="author">R. Cuenca</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">International Journal of Fatigue</span>
+			
+			<span class="year">(2010)</span>		</div>
+
+					<div class="abstract">This paper deals with the fatigue of the through-the-thickness crack propagation in <strong>thin</strong> notched</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_533b876e-1598-3a94-ace7-115cb0e18ce1" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_533b876e-1598-3a94-ace7-115cb0e18ce1"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=influence-woven-ply-degradation-fatigue-crack-growth-thin-notched-composites-under-tensile-loading' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="10 readers on Mendeley"><strong>10</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="b12d30a6-bf7b-3767-9a41-678008a3083c" class="clearfix item document   " id="document-b12d30a6-bf7b-3767-9a41-678008a3083c" data-doc="{&quot;title&quot;:&quot;Experimental Evaluation of the Damage Growth Restraining in 90.DEG. Layer of Thin-ply CFRP Cross-ply Laminates&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;0385-2563&quot;,&quot;doi&quot;:&quot;10.6089\/jscm.37.121&quot;},&quot;issue&quot;:&quot;4&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Journal of the Japan Society for Composite Materials&quot;,&quot;year&quot;:2011,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;&quot;,&quot;pages&quot;:&quot;121-129&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/experimental-evaluation-damage-growth-restraining-90deg-layer-thinply-cfrp-crossply-laminates\/&quot;,&quot;volume&quot;:&quot;37&quot;,&quot;path&quot;:&quot;\/catalog\/experimental-evaluation-damage-growth-restraining-90deg-layer-thinply-cfrp-crossply-laminates\/&quot;,&quot;canonicalId&quot;:&quot;b12d30a6-bf7b-3767-9a41-678008a3083c&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/experimental-evaluation-damage-growth-restraining-90deg-layer-thinply-cfrp-crossply-laminates/" title="Experimental Evaluation of the Damage Growth Restraining in 90.DEG. Layer of Thin-ply CFRP Cross-ply Laminates" target="_parent" data-log-action="Title" data-log-action="Title">Experimental Evaluation of the Damage Growth Restraining in 90.DEG. Layer of <strong>Thin</strong>-<strong>ply</strong> CFRP Cross-<strong>ply</strong> Laminates</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2011&amp;rft.volume=37&amp;rft.issue=4&amp;rft.pages=121-129&amp;rft.atitle=Experimental+Evaluation+of+the+Damage+Growth+Restraining+in+90.DEG.+Layer+of+Thin-ply+CFRP+Cross-ply+Laminates&amp;rft.jtitle=Journal+of+the+Japan+Society+for+Composite+Materials&amp;rft.title=Journal+of+the+Japan+Society+for+Composite+Materials&amp;rft.aulast=Takeuchi&amp;rft.aufirst=Hiroki&amp;rft.au=Saito%2C+Hiroshi&amp;rft.au=Kimpara%2C+Isao&amp;rft_id=info%3Adoi%2F10.6089%2Fjscm.37.121&amp;rft.issn=0385-2563"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">Hiroki Takeuchi</span><span class="sep">, </span>																				<span class="author">Hiroshi Saito</span><span class="sep">, </span>																				<span class="author">Isao Kimpara</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Journal of the Japan Society for Composite Materials</span>
+			
+			<span class="year">(2011)</span>		</div>
+
+					<div class="abstract"> behavior of <strong>thin</strong> 90° layers of cross-<strong>ply</strong> carbon fiber reinforced plastics (CFRP) laminates. The effect of <strong>ply</strong> thickness on the crack propagation <strong>mechanism</strong> was discussed with…</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_b12d30a6-bf7b-3767-9a41-678008a3083c" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_b12d30a6-bf7b-3767-9a41-678008a3083c"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=experimental-evaluation-damage-growth-restraining-90deg-layer-thinply-cfrp-crossply-laminates' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="12 readers on Mendeley"><strong>12</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="87f2ceac-bd0f-31b2-b863-bf842ab91d53" class="clearfix item document   " id="document-87f2ceac-bd0f-31b2-b863-bf842ab91d53" data-doc="{&quot;title&quot;:&quot;Thin Ply Composites&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;1639965X&quot;},&quot;issue&quot;:&quot;April&quot;,&quot;type&quot;:&quot;conference_proceedings&quot;,&quot;published_in&quot;:&quot;Structures, Structural Dynamics &amp; Materials Conference&quot;,&quot;year&quot;:2005,&quot;oa_journal&quot;:false,&quot;pages&quot;:&quot;1-5&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/research\/thin-ply-composites\/&quot;,&quot;path&quot;:&quot;\/research\/thin-ply-composites\/&quot;,&quot;canonicalId&quot;:&quot;87f2ceac-bd0f-31b2-b863-bf842ab91d53&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/research/thin-ply-composites/" title="Thin Ply Composites" target="_parent" data-log-action="Title" data-log-action="Title"><strong>Thin</strong> <strong>Ply</strong> Composites</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=proceeding&amp;rft.date=2005&amp;rft.issue=April&amp;rft.pages=1-5&amp;rft.atitle=Thin+Ply+Composites&amp;rft.aulast=Tsai&amp;rft.aufirst=Stephen+W.&amp;rft.au=Sihn%2C+Sangwook&amp;rft.au=Y.+Kim%2C+Ran&amp;rft.issn=1639965X"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">Stephen W. Tsai</span><span class="sep">, </span>																				<span class="author">Sangwook Sihn</span><span class="sep">, </span>																				<span class="author">Ran Y. Kim</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Structures, Structural Dynamics &amp; Materials Conference</span>
+			
+			<span class="year">(2005)</span>		</div>
+
+					<div class="abstract"> loading. With thick-<strong>thin</strong> <strong>ply</strong> hybrids, superior performance, lower cost and lower minimum gage can all</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_87f2ceac-bd0f-31b2-b863-bf842ab91d53" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_87f2ceac-bd0f-31b2-b863-bf842ab91d53"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=thin-ply-composites' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="6 readers on Mendeley"><strong>6</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="e343d474-2c8d-393e-8499-26d88eac1aca" class="clearfix item document   " id="document-e343d474-2c8d-393e-8499-26d88eac1aca" data-doc="{&quot;title&quot;:&quot;Damage occurrence at edges of non-crimp-fabric thin-ply laminates under off-axis uniaxial loading&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;02663538&quot;,&quot;isbn&quot;:&quot;02663538&quot;,&quot;doi&quot;:&quot;10.1016\/j.compscitech.2014.04.014&quot;},&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composites Science and Technology&quot;,&quot;year&quot;:2014,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/www.sciencedirect.com\/science\/article\/pii\/S0266353814001316&quot;,&quot;pages&quot;:&quot;44-50&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/damage-occurrence-edges-noncrimpfabric-thinply-laminates-under-offaxis-uniaxial-loading\/&quot;,&quot;volume&quot;:&quot;98&quot;,&quot;path&quot;:&quot;\/catalog\/damage-occurrence-edges-noncrimpfabric-thinply-laminates-under-offaxis-uniaxial-loading\/&quot;,&quot;canonicalId&quot;:&quot;e343d474-2c8d-393e-8499-26d88eac1aca&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/damage-occurrence-edges-noncrimpfabric-thinply-laminates-under-offaxis-uniaxial-loading/" title="Damage occurrence at edges of non-crimp-fabric thin-ply laminates under off-axis uniaxial loading" target="_parent" data-log-action="Title" data-log-action="Title">Damage occurrence at edges of non-crimp-fabric <strong>thin</strong>-<strong>ply</strong> laminates under off-axis uniaxial loading</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2014&amp;rft.volume=98&amp;rft.pages=44-50&amp;rft.atitle=Damage+occurrence+at+edges+of+non-crimp-fabric+thin-ply+laminates+under+off-axis+uniaxial+loading&amp;rft.jtitle=Composites+Science+and+Technology&amp;rft.title=Composites+Science+and+Technology&amp;rft.aulast=Guillamet&amp;rft.auinit1=G&amp;rft.au=Turon%2C+A.&amp;rft.au=Costa%2C+J.&amp;rft.au=Renart%2C+J.&amp;rft.au=Linde%2C+P.&amp;rft.au=Mayugo%2C+J.A.&amp;rft_id=info%3Adoi%2F10.1016%2Fj.compscitech.2014.04.014&amp;rft.issn=02663538&amp;rft.isbn=02663538"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">G. Guillamet</span><span class="sep">, </span>																				<span class="author">A. Turon</span><span class="sep">, </span>																				<span class="author">J. Costa</span><span class="sep">, </span>																				<span class="author">J. Renart</span><span class="sep">, </span>																				<span class="author">P. Linde</span><span class="sep">, </span>																				<span class="author">J.A. Mayugo</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composites Science and Technology</span>
+			
+			<span class="year">(2014)</span>		</div>
+
+					<div class="abstract"> with <strong>thin</strong> plies requires understanding the effect of <strong>ply</strong> thickness on each damage <strong>mechanism</strong>. This paper</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_e343d474-2c8d-393e-8499-26d88eac1aca" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_e343d474-2c8d-393e-8499-26d88eac1aca"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=damage-occurrence-edges-noncrimpfabric-thinply-laminates-under-offaxis-uniaxial-loading' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="21 readers on Mendeley"><strong>21</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="1f705880-2f1e-3355-9446-2717cf8dc861" class="clearfix item document   " id="document-1f705880-2f1e-3355-9446-2717cf8dc861" data-doc="{&quot;title&quot;:&quot;On the Mechanics of Thin-Walled Laminated Composite Beams&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;0021-9983&quot;,&quot;doi&quot;:&quot;10.1177\/002199839302700804&quot;},&quot;issue&quot;:&quot;8&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Journal of Composite Materials&quot;,&quot;year&quot;:1993,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;&quot;,&quot;pages&quot;:&quot;806-829&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/research\/mechanics-thinwalled-laminated-composite-beams\/&quot;,&quot;volume&quot;:&quot;27&quot;,&quot;path&quot;:&quot;\/research\/mechanics-thinwalled-laminated-composite-beams\/&quot;,&quot;canonicalId&quot;:&quot;1f705880-2f1e-3355-9446-2717cf8dc861&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/research/mechanics-thinwalled-laminated-composite-beams/" title="On the Mechanics of Thin-Walled Laminated Composite Beams" target="_parent" data-log-action="Title" data-log-action="Title">On the <strong>Mechanics</strong> of <strong>Thin</strong>-Walled Laminated Composite Beams</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=1993&amp;rft.volume=27&amp;rft.issue=8&amp;rft.pages=806-829&amp;rft.atitle=On+the+Mechanics+of+Thin-Walled+Laminated+Composite+Beams&amp;rft.jtitle=Journal+of+Composite+Materials&amp;rft.title=Journal+of+Composite+Materials&amp;rft.aulast=Barbero&amp;rft.aufirst=E.+J.&amp;rft.au=Lopez-Anido%2C+R.&amp;rft.au=Davalos%2C+J.+F.&amp;rft_id=info%3Adoi%2F10.1177%2F002199839302700804&amp;rft.issn=0021-9983"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">E. J. Barbero</span><span class="sep">, </span>																				<span class="author">R. Lopez-Anido</span><span class="sep">, </span>																				<span class="author">J. F. Davalos</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Journal of Composite Materials</span>
+			
+			<span class="year">(1993)</span>		</div>
+
+					<div class="abstract">A formal engineering approach of the <strong>mechanics</strong> of <strong>thin</strong>-walled laminated beanls based on kinenlatic assumptions consistent with Timoshenko beam theory is pre- sented. <strong>Thin</strong>-walled composite beams</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_1f705880-2f1e-3355-9446-2717cf8dc861" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_1f705880-2f1e-3355-9446-2717cf8dc861"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=mechanics-thinwalled-laminated-composite-beams' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="13 readers on Mendeley"><strong>13</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="93cc18b0-c5bf-3893-8d8f-f9960a276b25" class="clearfix item document   " id="document-93cc18b0-c5bf-3893-8d8f-f9960a276b25" data-doc="{&quot;title&quot;:&quot;Restraining Effects of Transverse Cracking in 90 Layer of Thin-ply CFRP Cross-ply Laminates&quot;,&quot;identifiers&quot;:{&quot;isbn&quot;:&quot;9781632660756&quot;},&quot;type&quot;:&quot;conference_proceedings&quot;,&quot;published_in&quot;:&quot;Proc of 7th AsianAustralasian Conference on Composite MaterialACCM7&quot;,&quot;year&quot;:2010,&quot;oa_journal&quot;:false,&quot;pages&quot;:&quot;WED-SE25-06 (CD-ROM)&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/restraining-effects-transverse-cracking-90-layer-thinply-cfrp-crossply-laminates\/&quot;,&quot;path&quot;:&quot;\/catalog\/restraining-effects-transverse-cracking-90-layer-thinply-cfrp-crossply-laminates\/&quot;,&quot;canonicalId&quot;:&quot;93cc18b0-c5bf-3893-8d8f-f9960a276b25&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/restraining-effects-transverse-cracking-90-layer-thinply-cfrp-crossply-laminates/" title="Restraining Effects of Transverse Cracking in 90 Layer of Thin-ply CFRP Cross-ply Laminates" target="_parent" data-log-action="Title" data-log-action="Title">Restraining Effects of Transverse Cracking in 90 Layer of <strong>Thin</strong>-<strong>ply</strong> CFRP Cross-<strong>ply</strong> Laminates</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=proceeding&amp;rft.date=2010&amp;rft.pages=WED-SE25-06+%28CD-ROM%29&amp;rft.atitle=Restraining+Effects+of+Transverse+Cracking+in+90+Layer+of+Thin-ply+CFRP+Cross-ply+Laminates&amp;rft.aulast=Takeuchi&amp;rft.aufirst=Hiroki&amp;rft.au=Saito%2C+Hiroshi&amp;rft.au=Kimpara%2C+Isao&amp;rft.isbn=9781632660756"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">Hiroki Takeuchi</span><span class="sep">, </span>																				<span class="author">Hiroshi Saito</span><span class="sep">, </span>																				<span class="author">Isao Kimpara</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Proc of 7th AsianAustralasian Conference on Composite MaterialACCM7</span>
+			
+			<span class="year">(2010)</span>		</div>
+
+					<div class="abstract">It is generally known that the crack initiation strain is increased with decreasing of <strong>ply</strong> thickness of 90olayer. However, the <strong>mechanism</strong> has not been well clarified in the case of very <strong>thin</strong>…</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_93cc18b0-c5bf-3893-8d8f-f9960a276b25" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_93cc18b0-c5bf-3893-8d8f-f9960a276b25"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=restraining-effects-transverse-cracking-90-layer-thinply-cfrp-crossply-laminates' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="6 readers on Mendeley"><strong>6</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="91be763b-5d5e-3806-a3c7-69ffd8ab49cf" class="clearfix item document   " id="document-91be763b-5d5e-3806-a3c7-69ffd8ab49cf" data-doc="{&quot;title&quot;:&quot;Thin Film Mechanics&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Harvard University&quot;,&quot;year&quot;:2004,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/mrsec.harvard.edu\/education\/ap298r2004\/Vlassak AP298presentation.pdf&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/research\/thin-film-mechanics\/&quot;,&quot;path&quot;:&quot;\/research\/thin-film-mechanics\/&quot;,&quot;canonicalId&quot;:&quot;91be763b-5d5e-3806-a3c7-69ffd8ab49cf&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/research/thin-film-mechanics/" title="Thin Film Mechanics" target="_parent" data-log-action="Title" data-log-action="Title"><strong>Thin</strong> Film <strong>Mechanics</strong></a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2004&amp;rft.atitle=Thin+Film+Mechanics&amp;rft.jtitle=Harvard+University&amp;rft.title=Harvard+University&amp;rft.aulast=Vlassak&amp;rft.aufirst=Joost"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">Joost Vlassak</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Harvard University</span>
+			
+			<span class="year">(2004)</span>		</div>
+
+					<div class="abstract">. Deformation processes in <strong>thin</strong> films Grain boundary diffusion controlled creep Dislocation <strong>mechanisms</strong></div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_91be763b-5d5e-3806-a3c7-69ffd8ab49cf" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_91be763b-5d5e-3806-a3c7-69ffd8ab49cf"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=thin-film-mechanics' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="100 readers on Mendeley"><strong>100</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="bfad11f9-d6bd-379a-94e7-2e70cd88b592" class="clearfix item document   " id="document-bfad11f9-d6bd-379a-94e7-2e70cd88b592" data-doc="{&quot;title&quot;:&quot;Improvement of tensile properties of CFRP composites under LEO space environment by applying MWNTs and thin-ply&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;1359835X&quot;,&quot;doi&quot;:&quot;10.1016\/j.compositesa.2011.02.011&quot;},&quot;issue&quot;:&quot;6&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composites Part A: Applied Science and Manufacturing&quot;,&quot;publisher&quot;:&quot;Elsevier Ltd&quot;,&quot;year&quot;:2011,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/dx.doi.org\/10.1016\/j.compositesa.2011.02.011&quot;,&quot;pages&quot;:&quot;694-701&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/research\/improvement-tensile-properties-cfrp-composites-under-leo-space-environment-applying-mwnts-thinply\/&quot;,&quot;volume&quot;:&quot;42&quot;,&quot;path&quot;:&quot;\/research\/improvement-tensile-properties-cfrp-composites-under-leo-space-environment-applying-mwnts-thinply\/&quot;,&quot;canonicalId&quot;:&quot;bfad11f9-d6bd-379a-94e7-2e70cd88b592&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/research/improvement-tensile-properties-cfrp-composites-under-leo-space-environment-applying-mwnts-thinply/" title="Improvement of tensile properties of CFRP composites under LEO space environment by applying MWNTs and thin-ply" target="_parent" data-log-action="Title" data-log-action="Title">Improvement of tensile properties of CFRP composites under LEO space environment by applying MWNTs and <strong>thin</strong>-<strong>ply</strong></a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2011&amp;rft.volume=42&amp;rft.issue=6&amp;rft.pages=694-701&amp;rft.atitle=Improvement+of+tensile+properties+of+CFRP+composites+under+LEO+space+environment+by+applying+MWNTs+and+thin-ply&amp;rft.jtitle=Composites+Part+A%3A+Applied+Science+and+Manufacturing&amp;rft.title=Composites+Part+A%3A+Applied+Science+and+Manufacturing&amp;rft.aulast=Moon&amp;rft.aufirst=Jin+Bum&amp;rft.au=Kim%2C+Myung+Gon&amp;rft.au=Kim%2C+Chun+Gon&amp;rft.au=Bhowmik%2C+Shantanu&amp;rft_id=info%3Adoi%2F10.1016%2Fj.compositesa.2011.02.011&amp;rft.issn=1359835X"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">Jin Bum Moon</span><span class="sep">, </span>																				<span class="author">Myung Gon Kim</span><span class="sep">, </span>																				<span class="author">Chun Gon Kim</span><span class="sep">, </span>																				<span class="author">Shantanu Bhowmik</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composites Part A: Applied Science and Manufacturing</span>
+			
+			<span class="year">(2011)</span>		</div>
+
+					<div class="abstract">Multi-wall carbon nanotube (MWNT) added carbon fiber reinforced plastics (CFRP) and <strong>thin</strong>-<strong>ply</strong></div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_bfad11f9-d6bd-379a-94e7-2e70cd88b592" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_bfad11f9-d6bd-379a-94e7-2e70cd88b592"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=improvement-tensile-properties-cfrp-composites-under-leo-space-environment-applying-mwnts-thinply' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="17 readers on Mendeley"><strong>17</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="345a7905-cc94-387e-9007-bbba474cc27e" class="clearfix item document   " id="document-345a7905-cc94-387e-9007-bbba474cc27e" data-doc="{&quot;title&quot;:&quot;An exact solution for the bending of thin and thick cross-ply laminated beams&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;02638223&quot;,&quot;doi&quot;:&quot;10.1016\/S0263-8223(97)80012-8&quot;},&quot;issue&quot;:&quot;2&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Composite Structures&quot;,&quot;year&quot;:1997,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/www.sciencedirect.com\/science\/article\/pii\/S0263822397800128&quot;,&quot;pages&quot;:&quot;195-203&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/exact-solution-bending-thin-thick-crossply-laminated-beams\/&quot;,&quot;volume&quot;:&quot;37&quot;,&quot;path&quot;:&quot;\/catalog\/exact-solution-bending-thin-thick-crossply-laminated-beams\/&quot;,&quot;canonicalId&quot;:&quot;345a7905-cc94-387e-9007-bbba474cc27e&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/exact-solution-bending-thin-thick-crossply-laminated-beams/" title="An exact solution for the bending of thin and thick cross-ply laminated beams" target="_parent" data-log-action="Title" data-log-action="Title">An exact solution for the bending of <strong>thin</strong> and thick cross-<strong>ply</strong> laminated beams</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=1997&amp;rft.volume=37&amp;rft.issue=2&amp;rft.pages=195-203&amp;rft.atitle=An+exact+solution+for+the+bending+of+thin+and+thick+cross-ply+laminated+beams&amp;rft.jtitle=Composite+Structures&amp;rft.title=Composite+Structures&amp;rft.aulast=Khdeir&amp;rft.aufirst=a.a.&amp;rft.au=Reddy%2C+J.N.&amp;rft_id=info%3Adoi%2F10.1016%2FS0263-8223%2897%2980012-8&amp;rft.issn=02638223"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">a.a. Khdeir</span><span class="sep">, </span>																				<span class="author">J.N. Reddy</span>												</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Composite Structures</span>
+			
+			<span class="year">(1997)</span>		</div>
+
+					<div class="abstract">The state-space concept in conjunction with the Jordan canonical form is presented to solve the governing equations for the bending of cross-<strong>ply</strong> laminated composite beams. The classical, first-order</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_345a7905-cc94-387e-9007-bbba474cc27e" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_345a7905-cc94-387e-9007-bbba474cc27e"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=exact-solution-bending-thin-thick-crossply-laminated-beams' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="22 readers on Mendeley"><strong>22</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+			<li>
+
+
+
+
+
+
+
+
+
+
+<article data-log-page="searchResults" data-id="b42fc0ec-8abe-31f5-8f05-dc5287c46649" class="clearfix item document   " id="document-b42fc0ec-8abe-31f5-8f05-dc5287c46649" data-doc="{&quot;title&quot;:&quot;Effect of ply-thickness on impact damage morphology in CFRP laminates&quot;,&quot;identifiers&quot;:{&quot;issn&quot;:&quot;0731-6844&quot;,&quot;isbn&quot;:&quot;0731684411416&quot;,&quot;doi&quot;:&quot;10.1177\/0731684411416532&quot;},&quot;issue&quot;:&quot;13&quot;,&quot;type&quot;:&quot;journal&quot;,&quot;published_in&quot;:&quot;Journal of Reinforced Plastics and Composites&quot;,&quot;year&quot;:2011,&quot;oa_journal&quot;:false,&quot;website&quot;:&quot;http:\/\/jrp.sagepub.com\/cgi\/doi\/10.1177\/0731684411416532&quot;,&quot;pages&quot;:&quot;1097-1106&quot;,&quot;url&quot;:&quot;http:\/\/www.mendeley.com\/catalog\/effect-plythickness-impact-damage-morphology-cfrp-laminates\/&quot;,&quot;volume&quot;:&quot;30&quot;,&quot;path&quot;:&quot;\/catalog\/effect-plythickness-impact-damage-morphology-cfrp-laminates\/&quot;,&quot;canonicalId&quot;:&quot;b42fc0ec-8abe-31f5-8f05-dc5287c46649&quot;}">
+
+	
+	<div class="item-info">
+		
+		
+		
+					<div class="title">
+									<a  href="/catalog/effect-plythickness-impact-damage-morphology-cfrp-laminates/" title="Effect of ply-thickness on impact damage morphology in CFRP laminates" target="_parent" data-log-action="Title" data-log-action="Title">Effect of <strong>ply</strong>-thickness on impact damage morphology in CFRP laminates</a>
+							</div>
+		
+		<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fmendeley.com%2Fmendeley&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.date=2011&amp;rft.volume=30&amp;rft.issue=13&amp;rft.pages=1097-1106&amp;rft.atitle=Effect+of+ply-thickness+on+impact+damage+morphology+in+CFRP+laminates&amp;rft.jtitle=Journal+of+Reinforced+Plastics+and+Composites&amp;rft.title=Journal+of+Reinforced+Plastics+and+Composites&amp;rft.aulast=Saito&amp;rft.auinit1=H&amp;rft.au=Morita%2C+M.&amp;rft.au=Kawabe%2C+K.&amp;rft.au=Kanesaki%2C+M.&amp;rft.au=Takeuchi%2C+H.&amp;rft.au=Tanaka%2C+M.&amp;rft.au=Kimpara%2C+I.&amp;rft_id=info%3Adoi%2F10.1177%2F0731684411416532&amp;rft.issn=0731-6844&amp;rft.isbn=0731684411416"></span>
+		<div class="metadata">
+						<span class="authors">
+															<span class="author">H. Saito</span><span class="sep">, </span>																				<span class="author">M. Morita</span><span class="sep">, </span>																				<span class="author">K. Kawabe</span><span class="sep">, </span>																				<span class="author">M. Kanesaki</span><span class="sep">, </span>																				<span class="author">H. Takeuchi</span><span class="sep">, </span>																				<span class="author">M. Tanaka</span><span class="sep">, </span>																					</span>
+			
+
+							<span class="sep">in</span> <span class="publication">Journal of Reinforced Plastics and Composites</span>
+			
+			<span class="year">(2011)</span>		</div>
+
+					<div class="abstract">In this article, the effects of <strong>ply</strong> thickness on the impact damage <strong>mechanisms</strong> in CFRP laminates</div>
+		
+		
+		<div class="item-footer article-footer unfloat">
+			<span class="actions">
+				
+														<a class="add_button addbtn_b42fc0ec-8abe-31f5-8f05-dc5287c46649" href="#" data-log-action="AddToLibrary" data-addedtolibrary="Mendeley.Collection.handleCanonicalDocumentAddList" data-join-overlay="document-add-to-library">
+						<span class="addlib  addtext_b42fc0ec-8abe-31f5-8f05-dc5287c46649"><strong>Save reference</strong> to library</span>
+					</a>
+				
+				
+									<span class="slug">&#183;</span>										<a rel="nofollow" href='/research-papers/?rec=effect-plythickness-impact-damage-morphology-cfrp-laminates' rel='nofollow' data-log-action="MoreLikeThis">
+						<span><strong>Related</strong> research</span>
+					</a>
+				
+				
+				
+				
+							</span>
+
+			<span class="counts">
+									<span class="reader-count" title="20 readers on Mendeley"><strong>20</strong> readers</span>
+							</span>
+		</div>
+	</div>
+
+	</article>
+</li>
+	</ol>
+
+<div class="clear"></div>
+
+
+	
+
+<div class="pagination-container">
+	
+		<div class="pagination-pages">
+
+<div class="pagemenu">
+		
+								
+		
+							
+							
+		
+				
+		
+										
+							
+		
+					<div class="arrow-disabled">Prev</div>
+			<img class="arrow-next-prev" src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/graphics/pagination/prev-disabled.png" alt="&lt;" title="Previous page" width="7" height="10">
+		
+		<ul>
+			
+							<li class="selected">1</li>
+			
+			
+												<li><a rel="nofollow" href="/research-papers/search/?query=thin+ply+mechanics&amp;page=1"  class="page">2</a></li>
+																<li><a rel="nofollow" href="/research-papers/search/?query=thin+ply+mechanics&amp;page=2"  class="page">3</a></li>
+							
+			
+							<li><a rel="nofollow" href="/research-papers/search/?query=thin+ply+mechanics&amp;page=29129"  class="page">… 29130</a></li>
+					</ul>
+
+		
+		<a href="/research-papers/search/?query=thin+ply+mechanics&amp;page=1"  class="pagemenu_next">			<img src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/graphics/pagination/next.png" alt="&gt;" title="Next page" class="arrow-next-prev" width="7" height="10">
+			<div class="arrow-enabled">Next</div>
+		</a>
+</div>
+
+
+<script>Mendeley.Paginator.paginate = true;</script>
+</div>
+	
+	<div style="clear:both"></div>
+</div>
+
+	
+							<script>
+	var _dataLogPageLoad = _dataLogPageLoad || [];
+	(function(dl){
+		var page = "searchResults";
+		var data = ["Success", "thin ply mechanics"];
+		dl.push({ page: page, data: data})
+	})(_dataLogPageLoad);
+	</script>
+
+
+
+
+	</div>
+	
+	<div class="clear"></div>
+</div>
+
+
+<div class="column-b unfloat">
+	<div class="padding"><form id="search-facets">
+	<h2 class="heading-line"><span>Refine search</span></h2>
+
+
+
+
+
+	
+	<div class="extra-facet-filter">
+		<label><input type="checkbox" name="openaccess" data-query="query=thin+ply+mechanics&amp;page=0&amp;openaccess=true" >Open Access articles only <img class="open-access" alt="Open Access" src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/graphics/commonnew/icon-open-access.png"></label>
+	</div>
+	
+	<!--<div class="form-item" id="search-facets-submit">
+		<input type="submit" value="Search">
+	</div>-->
+	
+	<!--<div class="form-item">
+		<input type="submit" value="Save this search query">
+	</div>-->
+</form>
+
+<script>
+
+$().ready(function(){
+	$("#search-facets a").bind("click", function(event) {
+		$("#main-content").css("opacity", 0.5);
+	});
+	
+  $("#search-facets input:checkbox").bind("change", function(event){
+	$("#main-content").css("opacity", 0.5);
+  	window.location.search = "?" + $(this).attr("data-query");
+  });
+  
+  $("#search-facets .show-more").live("click", function() {
+    $(this).fadeOut(0).siblings(':hidden').fadeIn();
+    return false;
+  });
+  
+  $(".search-facet ul").each(function(){
+  	var items = $(this).children("li:not(.selected)");
+  	if (items.length > 3){
+  		items.slice(3).hide("fast");
+  		$(this).append($("<li class='show-more'><a href='#show-more'><img src='//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/graphics/pages/research-papers/search/more-arrow.png'>more</a></li>"));
+  	}
+  });
+});
+
+</script>
+</div>
+	
+	</div>
+
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>	<div id="footer">
+	<div class="footer-content"><nav><ul id="footer-links" class="footer-links"><li><dl><dt>What is Mendeley?</dt><dd><a target="_parent" href="/features/">Features Overview</a></dd><dd><a target="_parent" href="/features/reference-manager/">Reference Manager</a></dd><dd><a target="_parent" href="/how-we-help/">How We Help</a></dd><dd><a target="_parent" href="/our-users/">Our Users</a></dd><dd><a target="_parent" href="/compare-mendeley/">Compare</a></dd></dl><dl><dt>About Us</dt><dd><a target="_parent" href="http://community.mendeley.com/events">Upcoming Events & Webinars</a></dd><dd><a target="_parent" href="http://community.mendeley.com">Advisors</a></dd><dd><a target="_parent" href="/review/">Awards & Reviews</a></dd><dd><a target="_parent" href="/about-us/">Our Team</a></dd><dd><a target="_parent" href="/careers/">Jobs</a></dd><dd><a target="_parent" href="/contact-us/">Contact Us</a></dd></dl><dl><dt>Support</dt><dd><a target="_parent" href="http://community.mendeley.com/guides">Help Guides</a></dd><dd><a target="_parent" href="http://community.mendeley.com/guides/videos">Videos & Tutorials</a></dd><dd><a target="_parent" href="/citationstyles/">Citation Styles</a></dd><dd><a target="_parent" href="https://mendeley.uservoice.com/">Feedback</a></dd><dd><a target="_parent" href="/release-notes/">Release Notes</a></dd><dd><a target="_parent" href="/contact-support/">Support</a></dd></dl><dl><dt>Useful Links</dt><dd><a target="_parent" href="http://blog.mendeley.com/">Blog</a></dd><dd><a target="_parent" href="/import/">Install Web Importer</a></dd><dd><a target="_parent" href="/endorsements/">University Endorsements</a></dd><dt>Developers</dt><dd><a target="_parent" href="http://dev.mendeley.com/">Mendeley API</a></dd></dl><dl><dt>Download and Upgrade</dt><dd><a target="_parent" href="/download-mendeley-desktop/?_section=footer" class="link-button primary" id="footer-download-mendeley" data-log-click="footer/download">Download Mendeley Free</a></dd> <!-- id needed for general_logging --><dt class="divider"></dt><dd><a target="_parent" href="http://itunes.apple.com/gb/app/mendeley-reference-manager/id380669300?mt=8">iOS</a></dd><dd><a target="_parent" href="http://ad.apps.fm/5GZMO4-8ru_PzJdqOXY2VF5KLoEjTszcQMJsV6-2VnHFDLXitVHB6BlL95nuoNYfX8CxpiCxdTjfi4OpH9y6n_i2h21HIaoPKV7O1lz6CvLPO84u9Xybgq8uUST8gwFd4uZl085zDwqZmpanJ_jONw">Android</a></dd><dd><a target="_parent" href="/upgrade/">Premium Packages</a></dd><dd><a target="_parent" href="/mendeley-institutional-edition/">Mendeley Institutional Edition</a></dd></dl></li></ul></nav>
+</div>
+
+	<div class="clear"></div>
+
+	<div class="footer-base-divider"></div>
+
+	<div class="footer-base"><span class="footer-policy-links"><span>Copyright &copy; 2016 Mendeley Ltd. All rights reserved.</span><a target="_parent" href="/terms/">Terms of Use</a><a target="_parent" href="/privacy/">Privacy Policy</a><a target="_parent" href="/copyright/">Copyright</a></span><span class="footer-social-links"><span>Find us on</span><a target="_parent" href="http://www.facebook.com/pages/Mendeley/42920143610" title="Facebook" class="footer-facebook-link"></a><a target="_parent" href="http://twitter.com/mendeley_com" title="Twitter" class="footer-twitter-link"></a><a target="_parent" href="http://www.youtube.com/user/MendeleyResearch" title="YouTube" class="footer-youtube-link"></a></span></div><div class="cookie-base footer-base"><span>Cookies are set by this site. To decline them or learn more, visit our <a target="_parent" href="/cookie-policy/">cookies</a> page.</span></div>
+</div>
+
+	</div>
+
+	<div id="fb-root"></div>
+	<script src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/minified/documentsearch.js"></script>	<!-- UserVoice JavaScript SDK (only needed once on a page) -->
+	<script>
+		(function(){
+			var uv = document.createElement('script');
+			uv.type = 'text/javascript';
+			uv.async = true;
+			uv.src = Mendeley.Config.uvWidgetSrc;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(uv,s)
+		})();
+
+		// A tab to launch the Classic Widget
+		UserVoice = window.UserVoice || [];
+		UserVoice.push(['showTab', Mendeley.Config.uvSsoToken, {
+			mode: 'feedback',
+			primary_color: '#cc6d00',
+			link_color: '#007dbf',
+			forum_id: Mendeley.Config.uvWidgetForumId,
+			tab_label: 'Feedback',
+			tab_color: '#a70805',
+			tab_position: 'middle-left',
+			tab_inverted: false
+		}]);
+	</script>
+
+
+<script src="//connect.facebook.net/en_US/all.js"></script><script src="/masterbrand/dist/js/index.js"></script><script type="text/javascript">pageDataTracker.trackPageLoad();</script>
+
+	<div id="slide-in-banner" class="non-iphone">
+	<div id="banner-content">
+		<img title="Reference management software" src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/graphics/commonnew/icn-pdf-preview.png" alt="Save PDF to library" class="paper-icon" id="paper-icon-pdf">
+		<img title="Reference management software" src="//d3fildg3jlcvty.cloudfront.net/bc81cc715210168e0bedbe08702f89e8d21ea011/graphics/commonnew/icn-ref.png" alt="Save reference to library" class="paper-icon hidden" id="paper-icon-ref">
+		<div class="tagline">Save time finding and organizing research with Mendeley</div>
+		<div><a href="https://www.mendeley.com/join/?_section=slide-in-bar" class="link-button" data-join-overlay="slide-in-bar">SIGN UP &amp; DOWNLOAD</a></div>
+		<a data-log-click="slide-in-bar/learn-more" alt="Mendeley features overview" href="/features/" id="learn-more-banner" >Learn more...</a>
+		<a class="close" href="#" onclick="Mendeley.SlideInBanner.hide(true, true); return false;" title="Hide this banner">close</a>
+	</div>
+</div>
+
+<script>
+	$(function() {
+		Mendeley.SlideInBanner.trackingPageType = "articles";
+		// See WWW-7528 we will comment out the following line for now until you have an agreement on the variation / or set up a test.
+		// Mendeley.SlideInBanner.changeUpsellMessage();
+		window.setTimeout("Mendeley.SlideInBanner.show(true);", 1500);
+	});
+</script>
+</body>
+
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fc20a8d468","applicationID":"478467","transactionName":"b1MBMEpWWxEFBkFQWVYZIBFLQ1oPSxdQSlNZRAAMFUdUEgEXRhZFXVcRB1AY","queueTime":0,"applicationTime":21,"atts":"QxQWRgJMSE5GBBcDTUVL","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script>
+
+
+<!-- bc81cc715210168e0bedbe08702f89e8d21ea011 from www.mendeley.com via ip-172-31-31-62.ec2.chonp.net. RID: 47dcc12d-84fd-465c-a3fe-50ba452a5817 -->
+</html>
