@@ -35,7 +35,9 @@ from BeautifulSoup import BeautifulSoup
 from random import randint
 
 
-path = 'D:/01_Luca/03_DocMASE/04_WD/literature_analysis/'
+#path = 'D:/01_Luca/03_DocMASE/04_WD/literature_analysis/'
+path = os.getcwd()
+print path
 filename1 = '2016_1_20_mendeley_search'
 filename2 = '2016_1_21_mendeley_search'
 filename3 = '2016_1_22_mendeley_search'
