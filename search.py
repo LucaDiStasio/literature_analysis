@@ -111,7 +111,7 @@ def update_screen(selectbrowser,count,maxpage,pubs):
    else:
       browser = "Firefox on Windows 7 64 bit"
    print "----------------------------------------------------------------------"
-   print "PUBLICATION number " + str(count) + " out of " + maxpage + " retrieved using " + browser + " on " + strftime("%d/%m/%Y") + " at " + strftime("%H-%M-%S")
+   print "PUBLICATION number " + str(count) + " out of " + maxpage + " retrieved using " + browser + " on " + strftime("%d/%m/%Y") + " at " + strftime("%H:%M:%S")
    print ""
    print pubs[0]
    print pubs[1]
