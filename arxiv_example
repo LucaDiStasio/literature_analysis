@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>arXiv.org Search</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/arXiv.css" />
+
+</head>
+<body class="with-cu-identity">
+<div id="cu-identity">
+<div id="cu-logo">
+<a id="insignia-link" href="http://www.cornell.edu/"><img src="/icons/cu/cul_signature_unstyled.gif" alt="Cornell University" width="283" height="76" border="0" /></a>
+<div id="unit-signature-links">
+<a id="cornell-link" href="http://www.cornell.edu/">Cornell University</a>
+<a id="unit-link" href="http://www.library.cornell.edu/">Library</a>
+</div>
+</div>
+<div id="support-ack">
+<a href="https://confluence.cornell.edu/x/FYBnDg">We gratefully acknowledge support from<br />the Simons Foundation<br /> and member institutions</a>
+</div>
+</div>
+<div id="header">
+<h1><a href="/">arXiv.org</a> &gt; search</h1>
+<form id="search" method="post" action="/search">
+<div class="search-for">Search or Article-id</div>
+<div class="links">(<a href="/help">Help</a> | <a href="/find">Advanced search</a>)</div>
+<input type="text" name="query" size="24" maxlength="64" />
+&nbsp;
+<select name="searchtype">
+<option value="all" selected="selected">All papers</option>
+<option value="ti">Titles</option>
+<option value="au">Authors</option>
+<option value="abs">Abstracts</option>
+<option value="ft">Full text</option>
+<option value="help">Help pages</option>
+</select>
+<input type="submit" value="Go!" /><br />
+</form>
+</div>
+<div id="content">
+<h2>arXiv.org Search Results</h2>
+<div id="dlpage">
+<a href="/find/all/1/all:+AND+fiber+composite/0/1/0/all/0/1?query_id=ace6b83f1ce54099&amp;form=yes">Back to Search form</a>
+&nbsp;|&nbsp;<a href="/find/all/1/all:+AND+fiber+composite/0/1/0/all/0/1?skip=25&amp;query_id=ace6b83f1ce54099">Next 25 results</a><p>The URL for this search is http://arxiv.org/find/all/1/all:+AND+fiber+composite/0/1/0/all/0/1<br /></p>
+<h3>Showing results 1 through 25 (of 164 total) for 
+<a href="/find/all/1/all:+AND+fiber+composite/0/1/0/all/0/1?skip=0&amp;query_id=ace6b83f1ce54099">all:(fiber AND composite)</a></h3>
+<dl>
+<dt>1.  <span class="list-identifier"><a href="/abs/1602.06139" title="Abstract">arXiv:1602.06139</a> [<a href="/pdf/1602.06139" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Toward a virtual material for lifetime prediction of CMCs
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Genet_M/0/1/0/all/0/1">Martin Genet</a>, 
+<a href="/find/cond-mat/1/au:+Ladeveze_P/0/1/0/all/0/1">Pierre Ladev&#xe8;ze</a> (LMT), 
+<a href="/find/cond-mat/1/au:+Lubineau_G/0/1/0/all/0/1">Gilles Lubineau</a> (LMT), 
+<a href="/find/cond-mat/1/au:+Baranger_E/0/1/0/all/0/1">Emmanuel Baranger</a> (LMT), 
+<a href="/find/cond-mat/1/au:+Mouret_A/0/1/0/all/0/1">A Mouret</a> (SPS)
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> 13th European Conference on Composites Materials, Jun 2008, Stockholm, Sweden. 2008
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>2.  <span class="list-identifier"><a href="/abs/1602.03818" title="Abstract">arXiv:1602.03818</a> [<a href="/pdf/1602.03818" title="Download PDF">pdf</a>, <a href="/ps/1602.03818" title="Download PostScript">ps</a>, <a href="/format/1602.03818" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Classical Higgs fields
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/math-ph/1/au:+Sardanashvily_G/0/1/0/all/0/1">G. Sardanashvily</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> 17 pages
+</div>
+<div class="list-journal-ref">
+<span class="descriptor">Journal-ref:</span> Theor. Math. Phys. v.181 (2014) pp. 1598-1610
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Mathematical Physics (math-ph)</span>; High Energy Physics - Theory (hep-th)
+
+</div>
+</div>
+</dd>
+<dt>3.  <span class="list-identifier"><a href="/abs/1602.01187" title="Abstract">arXiv:1602.01187</a> [<a href="/pdf/1602.01187" title="Download PDF">pdf</a>, <a href="/format/1602.01187" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Eigenvalue stratification and minimal smooth scaling-rotation curves in  the space of symmetric positive-definite matrices
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/math/1/au:+Groisser_D/0/1/0/all/0/1">David Groisser</a>, 
+<a href="/find/math/1/au:+Jung_S/0/1/0/all/0/1">Sungkyu Jung</a>, 
+<a href="/find/math/1/au:+Schwartzman_A/0/1/0/all/0/1">Armin Schwartzman</a>
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Metric Geometry (math.MG)</span>
+
+</div>
+</div>
+</dd>
+<dt>4.  <span class="list-identifier"><a href="/abs/1601.02241" title="Abstract">arXiv:1601.02241</a> [<a href="/pdf/1601.02241" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Extended Capability Models for Carbon Fiber Composite (CFC) Panels in  the Unstructured Transmission Line Modelling (UTLM) Method
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cs/1/au:+Meng_X/0/1/0/all/0/1">Xuesong Meng</a>, 
+<a href="/find/cs/1/au:+Vukovic_A/0/1/0/all/0/1">Ana Vukovic</a>, 
+<a href="/find/cs/1/au:+Benson_T/0/1/0/all/0/1">Trevor M. Benson</a>, 
+<a href="/find/cs/1/au:+Sewell_P/0/1/0/all/0/1">Phillip Sewell</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> 8 pages; submitted to IEEE Transactions on Electromagnetic Compatibility
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Computational Engineering, Finance, and Science (cs.CE)</span>
+
+</div>
+</div>
+</dd>
+<dt>5.  <span class="list-identifier"><a href="/abs/1601.01536" title="Abstract">arXiv:1601.01536</a> [<a href="/pdf/1601.01536" title="Download PDF">pdf</a>, <a href="/ps/1601.01536" title="Download PostScript">ps</a>, <a href="/format/1601.01536" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Perversely categorified Lagrangian correspondences
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/math/1/au:+Amorim_L/0/1/0/all/0/1">Lino Amorim</a>, 
+<a href="/find/math/1/au:+Ben_Bassat_O/0/1/0/all/0/1">Oren Ben-Bassat</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> v2: Fixed a reference
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Symplectic Geometry (math.SG)</span>; High Energy Physics - Theory (hep-th); Algebraic Geometry (math.AG)
+
+</div>
+</div>
+</dd>
+<dt>6.  <span class="list-identifier"><a href="/abs/1512.08505" title="Abstract">arXiv:1512.08505</a> [<a href="/pdf/1512.08505" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> The secret harmony of the random disorder, revealed in the paper sheet
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Silvy_J/0/1/0/all/0/1">Jacques Silvy</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> Derni\`ere version, in French
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>7.  <span class="list-identifier"><a href="/abs/1512.02879" title="Abstract">arXiv:1512.02879</a> [<a href="/pdf/1512.02879" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Nanoscale assembly processes revealed in the nacroprismatic transition  zone of Pinna nobilis mollusc shells
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Hovden_R/0/1/0/all/0/1">Robert Hovden</a>, 
+<a href="/find/cond-mat/1/au:+Wolf_S/0/1/0/all/0/1">Stephan E. Wolf</a>, 
+<a href="/find/cond-mat/1/au:+Holtz_M/0/1/0/all/0/1">Megan E. Holtz</a>, 
+<a href="/find/cond-mat/1/au:+Marin_F/0/1/0/all/0/1">Fr&#xe9;d&#xe9;ric Marin</a>, 
+<a href="/find/cond-mat/1/au:+Muller_D/0/1/0/all/0/1">David A. Muller</a>, 
+<a href="/find/cond-mat/1/au:+Estroff_L/0/1/0/all/0/1">Lara A. Estroff</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> 5 Figures
+</div>
+<div class="list-journal-ref">
+<span class="descriptor">Journal-ref:</span> Nature Communications, Vol. 6, Article number: 10097, 2015
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>8.  <span class="list-identifier"><a href="/abs/1511.04546" title="Abstract">arXiv:1511.04546</a> [<a href="/pdf/1511.04546" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Flexural free vibration as a non-destructive test for evaluation of  viscoelastic properties of polymeric composites in bending direction
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Jalili_M/0/1/0/all/0/1">Mohammad Mehdi Jalili</a>, 
+<a href="/find/cond-mat/1/au:+Mousavi_S/0/1/0/all/0/1">Seyyed Yahya Mousavi</a>, 
+<a href="/find/cond-mat/1/au:+Pirayeshfar_A/0/1/0/all/0/1">Amir Soheil Pirayeshfar</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> Iranian Polymer Journal, Volume 23, Issue 5, May 2014
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>9.  <span class="list-identifier"><a href="/abs/1511.04544" title="Abstract">arXiv:1511.04544</a> [<a href="/pdf/1511.04544" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> A comparative study on viscoelastic properties of polymeric composites  measured by a longitudinal free vibration non-destructive test and dynamic  mechanical thermal analysis
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Jalili_M/0/1/0/all/0/1">Mohammad Mehdi Jalili</a>, 
+<a href="/find/cond-mat/1/au:+Pirayeshfar_A/0/1/0/all/0/1">Amir Soheil Pirayeshfar</a>, 
+<a href="/find/cond-mat/1/au:+Mousavi_S/0/1/0/all/0/1">Seyyed Yahya Mousavi</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> Iranian Polymer Journal, Volume 21, Issue 9, September 2012
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>10.  <span class="list-identifier"><a href="/abs/1511.04543" title="Abstract">arXiv:1511.04543</a> [<a href="/pdf/1511.04543" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Investigating the acoustical properties of carbon fiber-, glass fiber-,  and hemp fiber-reinforced polyester composites
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Jalili_M/0/1/0/all/0/1">Mohammad Mehdi Jalili</a>, 
+<a href="/find/cond-mat/1/au:+Mousavi_S/0/1/0/all/0/1">Seyyed Yahya Mousavi</a>, 
+<a href="/find/cond-mat/1/au:+Pirayeshfar_A/0/1/0/all/0/1">Amir Soheil Pirayeshfar</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> Journal of Polymer Composites, Volume 35, Issue 11, November 2014
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>11.  <span class="list-identifier"><a href="/abs/1511.03845" title="Abstract">arXiv:1511.03845</a> [<a href="/pdf/1511.03845" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Photonic glass-ceramics: consolidated outcomes and prospects
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Boulard_B/0/1/0/all/0/1">Brigitte Boulard</a> (LDOF), 
+<a href="/find/cond-mat/1/au:+Van_T/0/1/0/all/0/1">Tran T. T. Van</a> (HCMC), 
+<a href="/find/cond-mat/1/au:+Lukowiak_A/0/1/0/all/0/1">Anna &#x141;ukowiak</a>, 
+<a href="/find/cond-mat/1/au:+Bouajaj_A/0/1/0/all/0/1">Adel Bouajaj</a> (LTI, ENSA--Tangier), 
+<a href="/find/cond-mat/1/au:+Goncalves_R/0/1/0/all/0/1">Rog&#xe9;ria Rocha Gon&#xe7;alves</a>, 
+<a href="/find/cond-mat/1/au:+Chiappini_A/0/1/0/all/0/1">Andrea Chiappini</a> (CSMFO Group, CNR-IFN), 
+<a href="/find/cond-mat/1/au:+Chiasera_A/0/1/0/all/0/1">Alessandro Chiasera</a> (CSMFO Group, CNR-IFN), 
+<a href="/find/cond-mat/1/au:+Blanc_W/0/1/0/all/0/1">Wilfried Blanc</a> (LPMC), 
+<a href="/find/cond-mat/1/au:+Duran_A/0/1/0/all/0/1">Alicia Duran</a> (MA), 
+<a href="/find/cond-mat/1/au:+Turrell_S/0/1/0/all/0/1">Sylvia Turrell</a> (LASIR), 
+<a href="/find/cond-mat/1/au:+Prudenzano_F/0/1/0/all/0/1">Francesco Prudenzano</a>, 
+<a href="/find/cond-mat/1/au:+Scotognella_F/0/1/0/all/0/1">Francesco Scotognella</a>, 
+<a href="/find/cond-mat/1/au:+Ramponi_R/0/1/0/all/0/1">Roberta Ramponi</a>, 
+<a href="/find/cond-mat/1/au:+Marciniak_M/0/1/0/all/0/1">Marian Marciniak</a> (RINCE), 
+<a href="/find/cond-mat/1/au:+Righini_G/0/1/0/all/0/1">Giancarlo Righini</a>, 
+<a href="/find/cond-mat/1/au:+Ferrari_M/0/1/0/all/0/1">Maurizio Ferrari</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> in SPIE Proceedings Series, 2015
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>; Optics (physics.optics)
+
+</div>
+</div>
+</dd>
+<dt>12.  <span class="list-identifier"><a href="/abs/1511.01300" title="Abstract">arXiv:1511.01300</a> [<a href="/pdf/1511.01300" title="Download PDF">pdf</a>, <a href="/format/1511.01300" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Spectroscopic aperture biases in inside-out evolving early-type galaxies  from CALIFA
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/astro-ph/1/au:+Gomes_J/0/1/0/all/0/1">J. M. Gomes</a>, 
+<a href="/find/astro-ph/1/au:+Papaderos_P/0/1/0/all/0/1">P. Papaderos</a>, 
+<a href="/find/astro-ph/1/au:+Vilchez_J/0/1/0/all/0/1">J. M. V&#xed;lchez</a>, 
+<a href="/find/astro-ph/1/au:+Kehrig_C/0/1/0/all/0/1">C. Kehrig</a>, 
+<a href="/find/astro-ph/1/au:+Iglesias_Paramo_J/0/1/0/all/0/1">J. Iglesias-P&#xe1;ramo</a>, 
+<a href="/find/astro-ph/1/au:+Breda_I/0/1/0/all/0/1">I. Breda</a>, 
+<a href="/find/astro-ph/1/au:+Lehnert_M/0/1/0/all/0/1">M. D. Lehnert</a>, 
+<a href="/find/astro-ph/1/au:+Sanchez_S/0/1/0/all/0/1">S. F. S&#xe1;nchez</a>, 
+<a href="/find/astro-ph/1/au:+Ziegler_B/0/1/0/all/0/1">B. Ziegler</a>, 
+<a href="/find/astro-ph/1/au:+Reis_S/0/1/0/all/0/1">S. N. dos Reis</a>, 
+<a href="/find/astro-ph/1/au:+Bland_Hawthorn_J/0/1/0/all/0/1">J. Bland-Hawthorn</a>, 
+<a href="/find/astro-ph/1/au:+Galbany_L/0/1/0/all/0/1">L. Galbany</a>, 
+<a href="/find/astro-ph/1/au:+Bomans_D/0/1/0/all/0/1">D. J. Bomans</a>, 
+<a href="/find/astro-ph/1/au:+Rosales_Ortega_F/0/1/0/all/0/1">F. F. Rosales-Ortega</a>, 
+<a href="/find/astro-ph/1/au:+Walcher_C/0/1/0/all/0/1">C. J. Walcher</a>, 
+<a href="/find/astro-ph/1/au:+Garcia_Benito_R/0/1/0/all/0/1">R. Garc&#xed;a-Benito</a>, 
+<a href="/find/astro-ph/1/au:+Marquez_I/0/1/0/all/0/1">I. M&#xe1;rquez</a>, 
+<a href="/find/astro-ph/1/au:+Olmo_A/0/1/0/all/0/1">A. del Olmo</a>, 
+<a href="/find/astro-ph/1/au:+Molla_M/0/1/0/all/0/1">M. Moll&#xe1;</a>, 
+<a href="/find/astro-ph/1/au:+Marino_R/0/1/0/all/0/1">R. A. Marino</a>, 
+<a href="/find/astro-ph/1/au:+Catalan_Torrecilla_C/0/1/0/all/0/1">C. Catal&#xe1;n-Torrecilla</a>, 
+<a href="/find/astro-ph/1/au:+Delgado_R/0/1/0/all/0/1">R. M. Gonz&#xe1;lez Delgado</a>, 
+<a href="/find/astro-ph/1/au:+Lopez_Sanchez_A/0/1/0/all/0/1">&#xc1;. R. L&#xf3;pez-S&#xe1;nchez</a>, 
+the <a href="/find/astro-ph/1/au:+collaboration_CALIFA/0/1/0/all/0/1">CALIFA collaboration</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> Accepted to A&amp;A, 6 pages, 4 figures
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Astrophysics of Galaxies (astro-ph.GA)</span>
+
+</div>
+</div>
+</dd>
+<dt>13.  <span class="list-identifier"><a href="/abs/1511.00665" title="Abstract">arXiv:1511.00665</a> [<a href="/pdf/1511.00665" title="Download PDF">pdf</a>, <a href="/ps/1511.00665" title="Download PostScript">ps</a>, <a href="/format/1511.00665" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Flops and spherical functors
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/math/1/au:+Bodzenta_A/0/1/0/all/0/1">Agnieszka Bodzenta</a>, 
+<a href="/find/math/1/au:+Bondal_A/0/1/0/all/0/1">Alexey Bondal</a>
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Algebraic Geometry (math.AG)</span>
+
+</div>
+</div>
+</dd>
+<dt>14.  <span class="list-identifier"><a href="/abs/1510.09070" title="Abstract">arXiv:1510.09070</a> [<a href="/pdf/1510.09070" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> A Framework for Teaching the Fundamentals of Additive Manufacturing and  Enabling Rapid Innovation
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/physics/1/au:+Go_J/0/1/0/all/0/1">Jamison Go</a>, 
+<a href="/find/physics/1/au:+Hart_A/0/1/0/all/0/1">A. John Hart</a>
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Physics Education (physics.ed-ph)</span>
+
+</div>
+</div>
+</dd>
+<dt>15.  <span class="list-identifier"><a href="/abs/1510.07973" title="Abstract">arXiv:1510.07973</a> [<a href="/pdf/1510.07973" title="Download PDF">pdf</a>, <a href="/ps/1510.07973" title="Download PostScript">ps</a>, <a href="/format/1510.07973" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> A Fuzzy-Stochastic Multiscale Model for Fiber Composites: A  one-dimensional study
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/math/1/au:+Babuska_I/0/1/0/all/0/1">Ivo Babuska</a>, 
+<a href="/find/math/1/au:+Motamed_M/0/1/0/all/0/1">Mohammad Motamed</a>
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Numerical Analysis (math.NA)</span>; Materials Science (cond-mat.mtrl-sci)
+
+</div>
+</div>
+</dd>
+<dt>16.  <span class="list-identifier"><a href="/abs/1510.07890" title="Abstract">arXiv:1510.07890</a> [<a href="/pdf/1510.07890" title="Download PDF">pdf</a>, <a href="/ps/1510.07890" title="Download PostScript">ps</a>, <a href="/format/1510.07890" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Assembly-Dependent Interfacial Property of Carbon Nanotube Fibers with  Epoxy and Its Enhancement via Generalized Surface Sizing
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Lei_C/0/1/0/all/0/1">Chaoshuai Lei</a>, 
+<a href="/find/cond-mat/1/au:+Zhao_J/0/1/0/all/0/1">Jingna Zhao</a>, 
+<a href="/find/cond-mat/1/au:+Zou_J/0/1/0/all/0/1">Jingyun Zou</a>, 
+<a href="/find/cond-mat/1/au:+Jiang_C/0/1/0/all/0/1">Chunyang Jiang</a>, 
+<a href="/find/cond-mat/1/au:+Li_M/0/1/0/all/0/1">Min Li</a>, 
+<a href="/find/cond-mat/1/au:+Zhang_X/0/1/0/all/0/1">Xiaohua Zhang</a>, 
+<a href="/find/cond-mat/1/au:+Zhang_Z/0/1/0/all/0/1">Zuoguang Zhang</a>, 
+<a href="/find/cond-mat/1/au:+Li_Q/0/1/0/all/0/1">Qingwen Li</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> 7 pages, 5 figures
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>17.  <span class="list-identifier"><a href="/abs/1510.05983" title="Abstract">arXiv:1510.05983</a> [<a href="/pdf/1510.05983" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Controlled atmosphere electrospinning of organic nanofibers with  improved light emission and waveguiding properties
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Fasano_V/0/1/0/all/0/1">Vito Fasano</a> (1), 
+<a href="/find/cond-mat/1/au:+Moffa_M/0/1/0/all/0/1">Maria Moffa</a> (2), 
+<a href="/find/cond-mat/1/au:+Camposeo_A/0/1/0/all/0/1">Andrea Camposeo</a> (2), 
+<a href="/find/cond-mat/1/au:+Persano_L/0/1/0/all/0/1">Luana Persano</a> (2), 
+<a href="/find/cond-mat/1/au:+Pisignano_D/0/1/0/all/0/1">Dario Pisignano</a> (1,2) ((1) Dipartimento di Matematica e Fisica &#x27;E. De Giorgi&#x27;-Universit&#xe0; del Salento, (2) Istituto Nanoscienze-CNR)
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> 26 pages, 11 figures
+</div>
+<div class="list-journal-ref">
+<span class="descriptor">Journal-ref:</span> Macromolecules, volume 48, pages 7803-7809 (2015)
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>18.  <span class="list-identifier"><a href="/abs/1510.00687" title="Abstract">arXiv:1510.00687</a> [<a href="/pdf/1510.00687" title="Download PDF">pdf</a>, <a href="/ps/1510.00687" title="Download PostScript">ps</a>, <a href="/format/1510.00687" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> A Recipe for Composite Materials: An Approach through Fiber Bundle Model
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Roy_S/0/1/0/all/0/1">Subhadeep Roy</a>, 
+<a href="/find/cond-mat/1/au:+Goswami_S/0/1/0/all/0/1">Sanchari Goswami</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> 6 pages, 6 figures
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>; Soft Condensed Matter (cond-mat.soft)
+
+</div>
+</div>
+</dd>
+<dt>19.  <span class="list-identifier"><a href="/abs/1509.07801" title="Abstract">arXiv:1509.07801</a> [<a href="/pdf/1509.07801" title="Download PDF">pdf</a>, <a href="/format/1509.07801" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Experimental and computational analysis of the behavior of ultra high  performance concrete at early age
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Wan_L/0/1/0/all/0/1">Lin Wan</a>, 
+<a href="/find/cond-mat/1/au:+Wendner_R/0/1/0/all/0/1">Roman Wendner</a>, 
+<a href="/find/cond-mat/1/au:+Liang_B/0/1/0/all/0/1">Benliang Liang</a>, 
+<a href="/find/cond-mat/1/au:+Cusatis_G/0/1/0/all/0/1">Gianluca Cusatis</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> 35 pages, 14 figures
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>20.  <span class="list-identifier"><a href="/abs/1509.07427" title="Abstract">arXiv:1509.07427</a> [<a href="/pdf/1509.07427" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Multifunctional polymer nanofibers: UV emission, optical gain,  anisotropic wetting and high hydrophobicity for next flexible excitation  sources
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Morello_G/0/1/0/all/0/1">Giovanni Morello</a> (1,2), 
+<a href="/find/cond-mat/1/au:+Manco_R/0/1/0/all/0/1">Rita Manco</a> (1,3), 
+<a href="/find/cond-mat/1/au:+Moffa_M/0/1/0/all/0/1">Maria Moffa</a> (1), 
+<a href="/find/cond-mat/1/au:+Persano_L/0/1/0/all/0/1">Luana Persano</a> (1), 
+<a href="/find/cond-mat/1/au:+Camposeo_A/0/1/0/all/0/1">Andrea Camposeo</a> (1,2), 
+<a href="/find/cond-mat/1/au:+Pisignano_D/0/1/0/all/0/1">Dario Pisignano</a> (1,2,3) ((1) Istituto Nanoscienze-CNR, (2) Center for Biomolecular Nanotechnologies-Istituto Italiano di Tecnologia, (3) Dipartimento di Matematica e Fisica &#x27;E. De Giorgi&#x27;-Universit&#xe0; del Salento)
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> 25 pages, 11 figures
+</div>
+<div class="list-journal-ref">
+<span class="descriptor">Journal-ref:</span> ACS Applied Materials &amp; Interfaces, volume 7, pages 21907-21912
+  (2015)
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>21.  <span class="list-identifier"><a href="/abs/1509.06541" title="Abstract">arXiv:1509.06541</a> [<a href="/pdf/1509.06541" title="Download PDF">pdf</a>, <a href="/format/1509.06541" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> The exponentiated Hencky strain energy in modelling tire derived  material for moderately large deformations
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/math/1/au:+Montella_G/0/1/0/all/0/1">Giuseppe Montella</a>, 
+<a href="/find/math/1/au:+Govindjee_S/0/1/0/all/0/1">Sanjay Govindjee</a>, 
+<a href="/find/math/1/au:+Neff_P/0/1/0/all/0/1">Patrizio Neff</a>
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Classical Analysis and ODEs (math.CA)</span>
+
+</div>
+</div>
+</dd>
+<dt>22.  <span class="list-identifier"><a href="/abs/1509.05140" title="Abstract">arXiv:1509.05140</a> [<a href="/pdf/1509.05140" title="Download PDF">pdf</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Multiscale modeling of microscale fiber reinforced composites with  nano-engineered interphases
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/physics/1/au:+Kundalwalal_S/0/1/0/all/0/1">S. I. Kundalwalal</a>, 
+<a href="/find/physics/1/au:+Kumar_S/0/1/0/all/0/1">S. Kumar</a>, 
+<a href="/find/physics/1/au:+Wardle_B/0/1/0/all/0/1">B. L. Wardle</a>
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Computational Physics (physics.comp-ph)</span>; Materials Science (cond-mat.mtrl-sci)
+
+</div>
+</div>
+</dd>
+<dt>23.  <span class="list-identifier"><a href="/abs/1509.02501" title="Abstract">arXiv:1509.02501</a> [<a href="/pdf/1509.02501" title="Download PDF">pdf</a>, <a href="/format/1509.02501" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Spectral Stiffness Microplane Model for Quasibrittle Textile Composites
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Salviato_M/0/1/0/all/0/1">Marco Salviato</a>, 
+<a href="/find/cond-mat/1/au:+Esfahani_S/0/1/0/all/0/1">Shiva Esna Ashari Esfahani</a>, 
+<a href="/find/cond-mat/1/au:+Cusatis_G/0/1/0/all/0/1">Gianluca Cusatis</a>
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>
+
+</div>
+</div>
+</dd>
+<dt>24.  <span class="list-identifier"><a href="/abs/1509.00970" title="Abstract">arXiv:1509.00970</a> [<a href="/pdf/1509.00970" title="Download PDF">pdf</a>, <a href="/format/1509.00970" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> Discrete Element Simulation of Transverse Cracking During the Pyrolysis  of Carbon Fibre Reinforced Plastics to Carbon/Carbon Composites
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/cond-mat/1/au:+Wittel_F/0/1/0/all/0/1">Falk K. Wittel</a>, 
+<a href="/find/cond-mat/1/au:+Schulte_Fischedick_J/0/1/0/all/0/1">Jan Schulte-Fischedick</a>, 
+<a href="/find/cond-mat/1/au:+Kun_F/0/1/0/all/0/1">Ferenc Kun</a>, 
+<a href="/find/cond-mat/1/au:+Kroeplin_B/0/1/0/all/0/1">Bernd-H. Kroeplin</a>, 
+<a href="/find/cond-mat/1/au:+Friess_M/0/1/0/all/0/1">Martin Friess</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> arXiv admin note: substantial text overlap with <a href="/abs/cond-mat/0109231">arXiv:cond-mat/0109231</a>
+</div>
+<div class="list-journal-ref">
+<span class="descriptor">Journal-ref:</span> Computational Materials Science (28/2003) 1-15
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Materials Science (cond-mat.mtrl-sci)</span>; Statistical Mechanics (cond-mat.stat-mech)
+
+</div>
+</div>
+</dd>
+<dt>25.  <span class="list-identifier"><a href="/abs/1508.06391" title="Abstract">arXiv:1508.06391</a> [<a href="/pdf/1508.06391" title="Download PDF">pdf</a>, <a href="/ps/1508.06391" title="Download PostScript">ps</a>, <a href="/format/1508.06391" title="Other formats">other</a>]</span></dt>
+<dd>
+<div class="meta">
+<div class="list-title">
+<span class="descriptor">Title:</span> LAMOST observations in the Kepler field. Database of low-resolution  spectra
+</div>
+<div class="list-authors">
+<span class="descriptor">Authors:</span> 
+<a href="/find/astro-ph/1/au:+Cat_P/0/1/0/all/0/1">P. De Cat</a> (Royal Observatory of Belgium), 
+<a href="/find/astro-ph/1/au:+Fu_J/0/1/0/all/0/1">J.N. Fu</a>, 
+<a href="/find/astro-ph/1/au:+Ren_A/0/1/0/all/0/1">A.B. Ren</a>, 
+<a href="/find/astro-ph/1/au:+Yang_X/0/1/0/all/0/1">X.H. Yang</a>, 
+<a href="/find/astro-ph/1/au:+Shi_J/0/1/0/all/0/1">J.R. Shi</a>, 
+<a href="/find/astro-ph/1/au:+Luo_A/0/1/0/all/0/1">A.L. Luo</a>, 
+<a href="/find/astro-ph/1/au:+Yang_M/0/1/0/all/0/1">M. Yang</a>, 
+<a href="/find/astro-ph/1/au:+Wang_J/0/1/0/all/0/1">J.L. Wang</a>, 
+<a href="/find/astro-ph/1/au:+Zhang_H/0/1/0/all/0/1">H.T. Zhang</a>, 
+<a href="/find/astro-ph/1/au:+Shi_H/0/1/0/all/0/1">H.M. Shi</a>, 
+<a href="/find/astro-ph/1/au:+Zhang_W/0/1/0/all/0/1">W. Zhang</a>, 
+<a href="/find/astro-ph/1/au:+Dong_S/0/1/0/all/0/1">Subo Dong</a>, 
+<a href="/find/astro-ph/1/au:+Catanzaro_G/0/1/0/all/0/1">G. Catanzaro</a>, 
+<a href="/find/astro-ph/1/au:+Corbally_C/0/1/0/all/0/1">C.J. Corbally</a>, 
+<a href="/find/astro-ph/1/au:+Frasca_A/0/1/0/all/0/1">A. Frasca</a>, 
+<a href="/find/astro-ph/1/au:+Gray_R/0/1/0/all/0/1">R.O. Gray</a>, 
+<a href="/find/astro-ph/1/au:+Molenda_Zakowicz_J/0/1/0/all/0/1">J. Molenda-Zakowicz</a>, 
+<a href="/find/astro-ph/1/au:+Uytterhoeven_K/0/1/0/all/0/1">K. Uytterhoeven</a>, 
+<a href="/find/astro-ph/1/au:+Briquet_M/0/1/0/all/0/1">M. Briquet</a>, 
+<a href="/find/astro-ph/1/au:+Bruntt_H/0/1/0/all/0/1">H. Bruntt</a>, 
+<a href="/find/astro-ph/1/au:+Frandsen_S/0/1/0/all/0/1">S. Frandsen</a>, 
+<a href="/find/astro-ph/1/au:+Kiss_L/0/1/0/all/0/1">L. Kiss</a>, 
+<a href="/find/astro-ph/1/au:+Kurtz_D/0/1/0/all/0/1">D.W. Kurtz</a>, 
+<a href="/find/astro-ph/1/au:+Marconi_M/0/1/0/all/0/1">M. Marconi</a>, 
+<a href="/find/astro-ph/1/au:+Niemczura_E/0/1/0/all/0/1">E. Niemczura</a>, 
+<a href="/find/astro-ph/1/au:+Oestensen_R/0/1/0/all/0/1">R.H. Oestensen</a>, 
+<a href="/find/astro-ph/1/au:+Ripepi_V/0/1/0/all/0/1">V. Ripepi</a>, 
+<a href="/find/astro-ph/1/au:+Smalley_B/0/1/0/all/0/1">B. Smalley</a>, 
+<a href="/find/astro-ph/1/au:+Southworth_J/0/1/0/all/0/1">J. Southworth</a>, 
+<a href="/find/astro-ph/1/au:+Szabo_R/0/1/0/all/0/1">R. Szabo</a>, 
+<a href="/find/astro-ph/1/au:+Telting_J/0/1/0/all/0/1">J.H. Telting</a>, 
+<a href="/find/astro-ph/1/au:+Karoff_C/0/1/0/all/0/1">C. Karoff</a>, 
+<a href="/find/astro-ph/1/au:+Aguirre_V/0/1/0/all/0/1">V. Silva Aguirre</a>, 
+<a href="/find/astro-ph/1/au:+Wu_Y/0/1/0/all/0/1">Y. Wu</a>, 
+<a href="/find/astro-ph/1/au:+Hou_Y/0/1/0/all/0/1">Y.H. Hou</a>, 
+<a href="/find/astro-ph/1/au:+Jin_G/0/1/0/all/0/1">G. Jin</a>, 
+<a href="/find/astro-ph/1/au:+Zhou_X/0/1/0/all/0/1">X.L. Zhou</a>
+</div>
+<div class="list-comments">
+<span class="descriptor">Comments:</span> Accepted for publication in ApJS (19 pages, 9 figures, 6 tables). Peter.DeCat@oma.be
+</div>
+<div class="list-subjects">
+<span class="descriptor">Subjects:</span> <span class="primary-subject">Solar and Stellar Astrophysics (astro-ph.SR)</span>
+
+</div>
+</div>
+</dd>
+</dl>
+<a href="/find/all/1/all:+AND+fiber+composite/0/1/0/all/0/1?query_id=ace6b83f1ce54099&amp;form=yes">Back to Search form</a>
+&nbsp;|&nbsp;<a href="/find/all/1/all:+AND+fiber+composite/0/1/0/all/0/1?skip=25&amp;query_id=ace6b83f1ce54099">Next 25 results</a></div> <!--end dlpage div-->
+</div>
+<div id="footer">
+<p>Link back to: <a href="http://arxiv.org/">arXiv</a>, <a href="/form">form interface</a>, <a href="/help/contact">contact</a>.</p>
+</div>
+</body>
+</html>
