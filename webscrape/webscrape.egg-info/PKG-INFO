@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: webscrape
+Version: 0.1
+Summary: Thematic analysis of scientific literature: tools for web scraping
+Home-page: http://github.com/LucaDiStasio/literature_analysis/webscrape
+Author: Luca Di Stasio
+Author-email: luca.distasio@gmail.com
+License: GNU GPL
+Description: Web scraping tools
+        -------------------------------------
+        
+        This version requires Python 2 or later.
+        
+Keywords: scraping,web scraping
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Development Status :: 0.1
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: Windows
+Classifier: Topic :: Web Scraping :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Linguistic

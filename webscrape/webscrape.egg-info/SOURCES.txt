@@ -1,0 +1,9 @@
+setup.py
+webscrape/__init__.py
+webscrape/scrapetools.py
+webscrape.egg-info/PKG-INFO
+webscrape.egg-info/SOURCES.txt
+webscrape.egg-info/dependency_links.txt
+webscrape.egg-info/not-zip-safe
+webscrape.egg-info/requires.txt
+webscrape.egg-info/top_level.txt
