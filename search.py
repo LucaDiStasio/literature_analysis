@@ -56,8 +56,8 @@ def init_json(outfilename,source,query):
       json.write('        "date": "' + today + '",\n')
       json.write('        "time": "' + now + '",\n')
       json.write('        "entries": {\n')
-      json.write('                   },\n')
       json.write('        "status":"end"\n')
+      json.write('                   }\n')
       json.write('              }\n')
       json.write('}\n')
 
@@ -86,7 +86,7 @@ def update_json(day,outfilename,pubs):
          newlines.append('          "keywords": "' + pubs[9] + '",\n')
          authorsList = pubs[1].split(',')
          firstAuthor = authorsList[0].replace(' ','-')
-         newlines.append('            "id": "' + firstAuthor + '-' + pubs[6] + '-' + str(randint(0, 100000)) + '",\n')
+         newlines.append('            "id": "' + firstAuthor + '-' + pubs[6] + '-' + str(randint(0, 100000)) + '"\n')
          newlines.append('                  },\n')
          newlines.append(line)
       else:
