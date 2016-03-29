@@ -155,7 +155,10 @@ def fool_website(count,mech):
       if randint(0,100) > 50:
          time.sleep(randint(5,120))
       if randint(0,100) < 50:
-         randompage = mech.open(webs[randint(1,int(webs[0]))])
+         try:
+            randompage = mech.open(webs[randint(1,int(webs[0]))])
+         except (mechanize.HTTPError,mechanize.URLError) as error:
+            print "Got error code: " + error.code
          time.sleep(randint(5,120))
               
 def init_browser(browser):
@@ -229,72 +232,83 @@ def scrape_mendeley(url, string, outfilename, startpage):
       if randint(0,100) > 50:
          selectbrowser = 0 # Firefox
       if selectbrowser:
-         pagemain = firstmech.open(pagequery)
+         try:
+            pagemain = firstmech.open(pagequery)
+            gotpage = True
+         except (mechanize.HTTPError,mechanize.URLError) as error:
+            print "Got error code: " + error.code
+            gotpage = False
       else:
-         pagemain = secondmech.open(pagequery)
-      pagehtml = pagemain.read().decode('utf-8', 'ignore')
-      mainsoup = BeautifulSoup(pagehtml)
-      if mainsoup.body.find(id="wrapper").find(id="main-container").find(id="content-container").find(id="main-content").find('ol') != None:
-         for item in mainsoup.body.find(id="wrapper").find(id="main-container").find(id="content-container").find(id="main-content").find('ol').findAll('li'):
-            pubs = []
-            title = ""
-            link = ""
-            authors = ""
-            publication = ""
-            year = ""
-            volume = ""
-            issue = ""
-            pages = ""
-            doi = ""
-            abstract = ""
-            keywords = ""
-            count = count + 1
-            title = item.article.find('div',"item-info").find('div',"title").a.get("title")
-            link = item.article.find('div',"item-info").find('div',"title").a.get("href").encode('utf8')
-            for author in item.article.find('div',"item-info").find('div',"metadata").find('span',"authors").findAll('span',"author"):
-               newauthor = author.text
-               if authors != "":
-                  authors = authors + ", " + newauthor
-               else:
-                  authors = authors + newauthor
-            publication = item.article.find('div',"item-info").find('div',"metadata").find('span',"publication").text
-            year = str(item.article.find('div',"item-info").find('div',"metadata").find('span',"year").text).replace("(","").replace(")","")
-            itemurl = "https://www.mendeley.com" + link
-            if selectbrowser:
-               itempage = firstmech.open(itemurl)
-            else:
-               itempage = secondmech.open(itemurl)
-            itemhtml = itempage.read().decode('utf-8', 'ignore')
-            itemsoup = BeautifulSoup(itemhtml)
-            if itemsoup.body.find('article').find(id="abstract-container") != None:
-               abstract = itemsoup.body.find('article').find(id="abstract-container").p.text
-            if itemsoup.body.find('article').find('ul',"identifiers-list") != None:
-               for identifier in itemsoup.body.find('article').find('ul',"identifiers-list").findAll('li'):
-                  if "DOI" in identifier.span.text or "doi" in identifier.span.text:
-                     doi = identifier.a.text
-            if itemsoup.body.find('article').find('div',"container-metadata") != None:
-               for info in itemsoup.body.find('article').find('div',"container-metadata").findAll('span',"info"):
-                  if "volume" in info.text or "Volume" in info.text:
-                     volume = info.span.text
-                  elif "issue" in info.text or "Issue" in info.text:
-                     issue = info.span.text
-                  elif "pages" in info.text or "Pages" in info.text:
-                     pages = info.span.text
-            if itemsoup.body.find('article').find(id="keywords-container") != None:
-               for keyword in itemsoup.body.find('article').find(id="keywords-container").find('div',"tags-list").findAll('a',"tag"):
-                  newkeyword = keyword.text
-                  if keywords != "":
-                     keywords = keywords + "; " + newkeyword
+         try:
+            pagemain = secondmech.open(pagequery)
+            gotpage = True
+         except (mechanize.HTTPError,mechanize.URLError) as error:
+            print "Got error code: " + error.code
+            gotpage = False
+      if gotpage:
+         pagehtml = pagemain.read().decode('utf-8', 'ignore')
+         mainsoup = BeautifulSoup(pagehtml)
+         if mainsoup.body.find(id="wrapper").find(id="main-container").find(id="content-container").find(id="main-content").find('ol') != None:
+            for item in mainsoup.body.find(id="wrapper").find(id="main-container").find(id="content-container").find(id="main-content").find('ol').findAll('li'):
+               pubs = []
+               title = ""
+               link = ""
+               authors = ""
+               publication = ""
+               year = ""
+               volume = ""
+               issue = ""
+               pages = ""
+               doi = ""
+               abstract = ""
+               keywords = ""
+               count = count + 1
+               title = item.article.find('div',"item-info").find('div',"title").a.get("title")
+               link = item.article.find('div',"item-info").find('div',"title").a.get("href").encode('utf8')
+               for author in item.article.find('div',"item-info").find('div',"metadata").find('span',"authors").findAll('span',"author"):
+                  newauthor = author.text
+                  if authors != "":
+                     authors = authors + ", " + newauthor
                   else:
-                     keywords = keywords + newkeyword
-         
-            pubs = [title, authors, publication, volume, issue, pages, year, doi, abstract, keywords]
+                     authors = authors + newauthor
+               publication = item.article.find('div',"item-info").find('div',"metadata").find('span',"publication").text
+               year = str(item.article.find('div',"item-info").find('div',"metadata").find('span',"year").text).replace("(","").replace(")","")
+               itemurl = "https://www.mendeley.com" + link
+               if selectbrowser:
+                  itempage = firstmech.open(itemurl)
+               else:
+                  itempage = secondmech.open(itemurl)
+               itemhtml = itempage.read().decode('utf-8', 'ignore')
+               itemsoup = BeautifulSoup(itemhtml)
+               if itemsoup.body.find('article').find(id="abstract-container") != None:
+                  abstract = itemsoup.body.find('article').find(id="abstract-container").p.text
+               if itemsoup.body.find('article').find('ul',"identifiers-list") != None:
+                  for identifier in itemsoup.body.find('article').find('ul',"identifiers-list").findAll('li'):
+                     if "DOI" in identifier.span.text or "doi" in identifier.span.text:
+                        doi = identifier.a.text
+               if itemsoup.body.find('article').find('div',"container-metadata") != None:
+                  for info in itemsoup.body.find('article').find('div',"container-metadata").findAll('span',"info"):
+                     if "volume" in info.text or "Volume" in info.text:
+                        volume = info.span.text
+                     elif "issue" in info.text or "Issue" in info.text:
+                        issue = info.span.text
+                     elif "pages" in info.text or "Pages" in info.text:
+                        pages = info.span.text
+               if itemsoup.body.find('article').find(id="keywords-container") != None:
+                  for keyword in itemsoup.body.find('article').find(id="keywords-container").find('div',"tags-list").findAll('a',"tag"):
+                     newkeyword = keyword.text
+                     if keywords != "":
+                        keywords = keywords + "; " + newkeyword
+                     else:
+                        keywords = keywords + newkeyword
             
-            update_screen(selectbrowser,count,maxpage,pubs)
-            
-            update_json(day,outfilename,pubs)
-            
-            fool_website(count,firstmech)
+               pubs = [title, authors, publication, volume, issue, pages, year, doi, abstract, keywords]
+               
+               update_screen(selectbrowser,count,maxpage,pubs)
+               
+               update_json(day,outfilename,pubs)
+               
+               fool_website(count,firstmech)
 
 def scrape_elsevier(username, password, url, string):
    # Create url for the query
