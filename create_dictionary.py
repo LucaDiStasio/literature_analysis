@@ -31,7 +31,7 @@ Tested with Python 2.7 Anaconda 2.4.1 (64-bit) distribution in Windows 7.
 
 '''
 
-import sys, getopt, re, mechanize, urllib, urllib2, cookielib, os, time, csv, codecs
+import sys, getopt, re, mechanize, urllib, urllib2, cookielib, os, time, csv, codecs, webscrape
 from BeautifulSoup import BeautifulSoup
 from time import strftime
 from random import randint
@@ -56,8 +56,8 @@ def init_json(language,outfilename,source,query):
       json.write('        "date": "' + today + '",\n')
       json.write('        "time": "' + now + '",\n')
       json.write('        "entries": {\n')
-      json.write('                   },\n')
       json.write('        "status":"end"\n')
+      json.write('                   }\n')
       json.write('              }\n')
       json.write('}\n')
 
