@@ -105,3 +105,103 @@ def update_screen(selectbrowser,count,maxpage,pubs):
    print pubs[0] + ', ' + pubs[1]
    print ""
    print "----------------------------------------------------------------------"
+
+def main(argv):
+   dictionary = ''
+   source = ''
+   outputfile = ''
+   try:
+      opts, args = getopt.getopt(argv,"hd:s:o:",["help","Help","dict","dictionary","source","ofile","outfile","outputfile"])
+   except getopt.GetoptError:
+      print 'create_dictionary.py -d <dictionary> -s <corpus source> -o <dictionary file>'
+      sys.exit(2)
+   for opt, arg in opts:
+    if opt in ("-h", "--help","--Help"):
+        print ''
+        print ''
+        print '*********************************************************************************'
+        print '*                                                                               *'
+        print '*               A TOOL FOR SCIENTIFIC LITERATURE ANALYSIS                       *'
+        print '*                                                                               *'
+        print '*                                                                               *'
+        print '*                          Dictionary creation                                  *'
+        print '*                                                                               *'
+        print '*                                 by                                            *'
+        print '*                                                                               *'
+        print '*                        Luca Di Stasio, 2016                                   *'
+        print '*                                                                               *'
+        print '*********************************************************************************'
+        print ''
+        print 'Program syntax:'
+        print 'create_dictionary.py -d <dictionary> -s <corpus source> -o <dictionary file>'
+        print ''
+        print 'Mandatory arguments:'
+        print '-s <corpus source> (without extension, it must be in json format)'
+        print ''
+        print 'Optional arguments:'
+        print '-d <dictionary> -o <dictionary file> (without extension, it must be in json format)'
+        print ''
+        print 'Available dictionaries:'
+        print 'Dictionary                                           Command-line option'
+        print '--------------------------------------------------------------------------'
+        print 'Oxford Dictionary (English)                          oxford'
+        print ''
+        print ''
+        sys.exit()
+    elif opt in ("-d", "--dict","--dictionary"):
+        dictionary = arg
+    elif opt in ("-s", "--source"):
+        source = arg
+    elif opt in ("-o", "--ofile","--outfile","--outputfile"):
+        outputfile = arg
+    
+    with codecs.open(source + '.json','r','utf-8') as jsonfile:
+        lines = jsonfile.readlines()
+    
+    if dictionary=='':
+        dictionary = 'oxford'
+    
+    if dictionary == 'oxford':
+        url = 'http://www.oxforddictionaries.com/'
+    elif dictionary == 'larousse':
+        url = ''
+    
+    words = []
+    for line in lines:
+        if 'abstract' in line:
+            chunks = line.split(':')
+            items = " ".join(chunks[1:])[2:-3].split(' ')
+            for item in enumerate(items):
+                if len(item)>0 and item[-1] in [',' , ';' , '.' , ':' , '!' , '?' , ')' , ']' , '}' , '"' , '\'']:
+                    item = item[:-1]
+                if len(item)>0 and item[0] in [',' , ';' , '.' , ':' , '!' , '?' , '(' , '[' , '{' , '"' , '\'']:
+                    item = item[1:]
+                    
+                # Create url for the query
+                query = url
+                
+                firstmech = webscrape.init_browser('chrome')
+                secondmech = webscrape.init_browser('firefox')
+                
+                main = firstmech.open(url)
+                html = main.read()
+                initmainsoup = BeautifulSoup(html)
+                print initmainsoup
+                
+                print initmainsoup
+                for form in main.forms():
+                    print form
+                '''
+                firstmech.select_form(nr=0)
+                firstmech["s"] = item
+                resp = firstmech.submit()
+                
+                html = resp.read()
+                initmainsoup = BeautifulSoup(html)
+                
+                print initmainsoup
+'''
+            
+    
+if __name__ == "__main__":
+   main(sys.argv[1:])
