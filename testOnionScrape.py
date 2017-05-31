@@ -42,6 +42,7 @@ import sys, getopt, re, mechanize, urllib, urllib2, cookielib, os, csv, codecs
 from BeautifulSoup import BeautifulSoup
 from time import strftime
 from random import randint
+import requests
 
 '''
 def switchIP():
@@ -78,13 +79,14 @@ print(initmainsoup)
 '''
 
 
-SOCKS_PORT=7000# You can change the port number
+SOCKS_PORT=9150# You can change the port number
 
 tor_process = stem.process.launch_tor_with_config(
-    tor_cmd = 'C:/Programmes/Tor Browser/Browser/TorBrowser/Tor/tor.exe',
+    tor_cmd = 'C:\\Program Files\\Tor Browser\\Browser\\TorBrowser\\Tor\\tor.exe',
+    timeout = 600,
     config = {
         'SocksPort': str(SOCKS_PORT),
-    },
+    }
 )
 
 
@@ -98,7 +100,10 @@ socket.socket = socks.socksocket
 
 #Write your scraping code here -- I use BeautifulSoup for scraping
 
-print requests.get("http://icanhazip.com").text
+html = requests.get("http://www.eng-tips.com/viewthread.cfm?qid=274802").text
+initmainsoup = BeautifulSoup(html)
 
+print initmainsoup.body
 
 tor_process.kill()
+
