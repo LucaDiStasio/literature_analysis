@@ -62,4 +62,5 @@ browser.visit("http://www.icanhazip.com")
 for x in range(10):
     browser.visit("http://www.icanhazip.com")
     switchIP()
+    print(x)
     time.sleep(5)
